@@ -1,0 +1,99 @@
+/** 
+font-family: 'General Sans', sans-serif;
+font-family: 'Gambarino', serif;
+**/
+
+:root {
+  --primaryfont: "General Sans", sans-serif;
+  --secondaryfont: "Gambarino", serif;
+  --flamepea50: #f1e9d9;
+  --flamepea400: #e58952;
+  --flamepea500: #df6b30;
+  --pesto300: #c2c294;
+  --pesto400: #a9aa71;
+  --pesto600: #757744;
+  --pesto800: #46472d;
+  --pesto950: #1f2013;
+  --cornflowerblue: #9ac3f6;
+}
+body {
+  margin: 0 120px;
+}
+
+/* FontSize/WEB/H1 */
+h1 {
+  color: var(--pesto950);
+  font-family: "General Sans";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+/* FontSize/WEB/H2 */
+h2 {
+  color: var(--pesto950);
+  font-family: "General Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+/* FontSize/WEB/H3 */
+h3 {
+  color: var(--pesto950);
+  font-family: "General Sans";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+/* FontSize/WEB/P */
+p {
+  color: var(--pesto950);
+  font-family: "Gambarino";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 200% */
+  max-width: 70ch;
+}
+
+/* Mobil */
+@media (max-width: 800px) {
+  /* FontSize/MOBIL/H1 */
+  h1 {
+    color: var(--pesto950);
+    font-family: "General Sans";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  /* FontSize/MOBIL/H2 */
+  h2 {
+    color: var(--pesto950);
+    font-family: "General Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  /* FontSize/MOBIL/H3 */
+  h3 {
+    color: var(--pesto950);
+    font-family: "General Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  /* FontSize/MOBIL/P */
+  p {
+    color: var(--pesto950);
+    font-family: "Gambarino";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 250% */
+  }
+}
