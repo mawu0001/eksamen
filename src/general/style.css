@@ -44,6 +44,14 @@ h3 {
   font-weight: 500;
   line-height: normal;
 }
+/* FontSize/WEB/H4 */
+h4 {
+  font-family: "General Sans";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 /* FontSize/WEB/P */
 p {
   color: var(--pesto950);
@@ -82,6 +90,15 @@ p {
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
+    line-height: normal;
+  }
+
+  /* FontSize/MOBIL/H4 */
+  h4 {
+    font-family: "General Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
     line-height: normal;
   }
   /* FontSize/MOBIL/P */
