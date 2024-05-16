@@ -1,3 +1,31 @@
 ---
-
+import Layout from "../general/layout.astro";
+import Behandlings from "../components/Behandlings.astro";
+const data = await fetch(
+  "https://jnfsonguvexswcioudjt.supabase.co/rest/v1/behandlinger",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuZnNvbmd1dmV4c3djaW91ZGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU3NjYyMjksImV4cCI6MjAzMTM0MjIyOX0.Z02awUWrz1wRXwd_Ybyt7-aHDrrAk2vnohh-uoBD2mQ",
+    },
+  }
+).then((res) => res.json());
+console.log(data);
 ---
+
+<Layout>
+  <Behandlings
+    title="Behandlingsområder"
+    heading1="Angst"
+    heading2="Stress"
+    heading3="Særligt Sensitiv"
+    heading4="Spiseforstyrrelse"
+  />
+</Layout>
+
+<!-- curl 'https://jnfsonguvexswcioudjt.supabase.co/rest/v1/behandlinger' \
+-H "apikey:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuZnNvbmd1dmV4c3djaW91ZGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU3NjYyMjksImV4cCI6MjAzMTM0MjIyOX0.Z02awUWrz1wRXwd_Ybyt7-aHDrrAk2vnohh-uoBD2mQ"
+\ -H "Authorization: Bearer
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuZnNvbmd1dmV4c3djaW91ZGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU3NjYyMjksImV4cCI6MjAzMTM0MjIyOX0.Z02awUWrz1wRXwd_Ybyt7-aHDrrAk2vnohh-uoBD2mQ" -->
