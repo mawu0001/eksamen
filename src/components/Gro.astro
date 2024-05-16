@@ -1,0 +1,57 @@
+---
+import Knap from "./Knap.astro";
+
+
+---
+
+<section>
+  <div id="heading">  
+    <h2>Plads til at vokse og gro</h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est
+      ectetur adipisicing elit. Deserunt 
+        
+        <Knap title="Læs mere" link="/pages/ommig.html" />
+    </p>   
+  </div>
+
+
+     <img src="../img/vokseoggro.webp" alt="" />
+
+</section>
+
+
+
+<style>
+  section {
+    background-color: var(--pesto300);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 27px 100px;
+  }
+  #heading {
+    grid-column: 1;
+    padding:30px;
+    margin-left:24%;
+  }
+
+
+  img {
+    width: 62%;
+    height: auto;
+    grid-column: 2;
+    align-self: center;
+    display:flex;
+    justify-self:center;
+    
+  }
+  h3 {
+    font-family: var(--secondaryfont);
+  }
+  @media (max-width: 800px);{
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+</style>
