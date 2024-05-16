@@ -1,47 +1,10 @@
 ---
-const { title, heading1, heading2, heading3, heading4 } = Astro.props;
+const { data } = Astro.props;
 ---
 
-<section id="localmenu">
-  <h2>{title}</h2>
-  <article>
-    <a href="#">{heading1}</a>
-    <a href="#">{heading2}</a>
-    <a href="#">{heading3}</a>
-    <a href="#">{heading4}</a>
-  </article>
-</section>
-<template>
-  <article>
-    <h3>Angst</h3>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae et sed
-      nam cupiditate sint similique? Officiis, explicabo? Consequuntur magnam
-      labore esse dolorem aliquid! Consequuntur officia iste ut quasi placeat
-      nihil!
-    </p>
-  </article>
-</template>
-
-<style>
-  a {
-    color: var(--Pesto950);
-    text-align: center;
-    font-family: "General Sans";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  #localmenu {
-    background-color: var(--pesto300);
-  }
-  #localmenu article {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: space-evenly;
-  }
-</style>
+<article>
+  <h3>{data.title}</h3>
+  <p>
+    {data.text}
+  </p>
+</article>
