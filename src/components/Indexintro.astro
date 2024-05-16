@@ -1,0 +1,49 @@
+---
+import Knap from "./Knap.astro";
+---
+
+<section>
+  <div id="heading">
+    <h3>Psyokoterapeut</h3>
+    <h1>Pernille Grønhøj</h1>
+  </div>
+  <img src="../img/indexportrait.png" alt="" />
+  <div>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est
+      harum ullam odio nemo, inventore consequuntur libero corrupti officia quia
+      facere maxime eos ducimus earum! Ut natus magni nulla cumque.
+    </p>
+    <Knap title="Læs mere" link="/pages/ommig.html" />
+    <Knap title="Book tid" link="/pages/priserkontakt.html" />
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: var(--pesto300);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px 100px;
+  }
+  #heading {
+    grid-column: 2;
+  }
+  img {
+    width: 80%;
+    height: auto;
+    grid-column: 1;
+    grid-row: 1 / span2;
+    align-self: center;
+  }
+  h3 {
+    font-family: var(--secondaryfont);
+  }
+  @media (max-width: 800px);{
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+</style>

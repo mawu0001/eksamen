@@ -1,0 +1,37 @@
+---
+const { title, link } = Astro.props;
+---
+
+<button class="button link-button" id="Buttonjs" data-link={link}>
+  {title}</button
+>
+
+<style>
+  .button {
+    background-color: var(--cornflowerblue);
+    width: 229px;
+    height: 68px;
+    border-radius: 30px;
+    border: none;
+    color: var(--pesto950);
+    font-family: var(--primaryfont);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".link-button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const link = this.getAttribute("data-link");
+        if (link) {
+          window.location.href = link;
+        }
+      });
+    });
+  });
+</script>

@@ -2,7 +2,10 @@
 font-family: 'General Sans', sans-serif;
 font-family: 'Gambarino', serif;
 **/
-
+* {
+  margin: 0;
+  padding: 0;
+}
 :root {
   --primaryfont: "General Sans", sans-serif;
   --secondaryfont: "Gambarino", serif;
@@ -13,10 +16,13 @@ font-family: 'Gambarino', serif;
   --pesto950: #1f2013;
   --cornflowerblue: #9ac3f6;
 }
-main {
+/* main {
   margin: 0 120px;
-}
+} */
 
+body {
+  background-color: var(--flamepea50);
+}
 /* FontSize/WEB/H1 */
 h1 {
   color: var(--pesto950);
