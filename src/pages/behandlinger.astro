@@ -11,42 +11,14 @@ const data = await fetch(
     },
   }
 ).then((res) => res.json());
+const area = data.filter((behandlinger) => behandlinger.type == `true`);
+const form = data.filter((behandlinger) => behandlinger.type == `false`);
+console.log(data);
 ---
 
 <Layout>
-  <section>
-    <div class="localmenu1">
-      <h2>Behandlingsområder</h2>
-      <article>
-        <a href="#">Angst</a>
-        <a href="#">Stress</a>
-        <a href="#">Særligt Sensitiv</a>
-        <a href="#">Spiseforstyrrelse</a>
-      </article>
-    </div>
-    {
-      data.map((type) => {
-        return <Behandlings data={type} />;
-      })
-    }
-  </section>
-  <section>
-    <div class="localmenu2">
-      <h2>Behandlingstyper</h2>
-      <article>
-        <a href="#">Online</a>
-        <a href="#">Walk & Talk</a>
-        <a href="#">Samtale</a>
-      </article>
-    </div>
-    {
-      data.map((type) => {
-        return <Behandlings data={type} />;
-      })
-    }
-  </section>
+  <Behandlings indhold={area} />
 </Layout>
-
 <style>
   h2 {
     text-align: center;
