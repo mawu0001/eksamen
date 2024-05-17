@@ -16,11 +16,11 @@ const { indhold } = Astro.props;
   </div>
   {
     indhold.map((type) => {
-      return <Extra data={Behandlinger} />;
+      return <Extra datatype={type} />;
     })
   }
 </section>
-<section>
+<!-- <section>
   <div class="localmenu2">
     <h2>Behandlingstyper</h2>
     <article>
@@ -34,4 +34,4 @@ const { indhold } = Astro.props;
       return <Behandlings data={form} />;
     })
   }
-</section>
+</section> -->

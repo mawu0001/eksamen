@@ -1,10 +1,10 @@
 ---
-const { data } = Astro.props;
+const { datatype } = Astro.props;
 ---
 
 <article>
-  <h3>{data.title}</h3>
+  <h3>{datatype.title}</h3>
   <p>
-    {data.text}
+    {datatype.text}
   </p>
 </article>
