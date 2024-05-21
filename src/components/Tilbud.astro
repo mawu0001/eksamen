@@ -1,0 +1,87 @@
+---
+import Knap from "./Knap.astro";
+---
+
+<section id="img_container" >
+        <img src="../img/havet.webp" alt="">
+  <article id="samlet_tilbud">
+    <div id="heading">
+    <h2>Hvad kan jeg tilbyde dig?</h2>
+    <p>-en gratis uforpligtende første samtale</p>
+    </div>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est
+      harum ullam odio nemo, inventore consequuntur libero corrupti officia quia
+      facere maxime eos ducimus earum! Ut natus magni nulla cumque.
+
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est
+      harum ullam odio nemo, inventore consequuntur libero corrupti officia quia
+      facere maxime eos ducimus earum! Ut natus magni nulla cumque.
+    </p>
+    <Knap title="Læs mere" link="/pages/ommig.html" />
+  </article> 
+</section>
+
+<style>
+    img{
+        width: 100vw;
+        height:auto;
+    }
+  section {
+    /* background-image: url("../img/havet.webp"); */
+    /* background-repeat: no-repeat;
+    display: grid;
+    grid-template-rows: 1fr 1fr; */
+    /* padding: 10px 100px; */
+    
+  }
+  #img_container{
+position: relative;
+display:inline-block;
+
+  }
+
+  #heading{
+  margin-left:22%;
+  margin-bottom: 5%;
+
+  }
+
+  #samlet_tilbud{
+border-radius: 30px;
+background: rgba(229, 137, 82, 0.70);
+position:absolute;
+padding: 50px;
+width:1000px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display:grid;
+  }
+
+  p{
+    column-count: 2;
+    column-gap: 20px;
+  }
+/* 
+  #tilbud{
+    text-align:center;
+  }
+
+  #mere_tilbud{
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px 10px;
+  } */
+
+  h3 {
+    font-family: var(--secondaryfont);
+  }
+  @media (max-width: 800px);{
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+</style>

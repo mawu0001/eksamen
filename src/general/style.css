@@ -2,21 +2,27 @@
 font-family: 'General Sans', sans-serif;
 font-family: 'Gambarino', serif;
 **/
-
+* {
+  margin: 0;
+  padding: 0;
+}
 :root {
   --primaryfont: "General Sans", sans-serif;
   --secondaryfont: "Gambarino", serif;
   --flamepea50: #f1e9d9;
-  --flamepea300: ##eeb283;
+  --flamepea300: #eeb283;
   --flamepea400: #e58952;
   --pesto300: #c2c294;
   --pesto950: #1f2013;
   --cornflowerblue: #9ac3f6;
 }
-main {
+/* main {
   margin: 0 120px;
-}
+} */
 
+body {
+  background-color: var(--flamepea50);
+}
 /* FontSize/WEB/H1 */
 h1 {
   color: var(--pesto950);
@@ -44,6 +50,14 @@ h3 {
   font-weight: 500;
   line-height: normal;
 }
+/* FontSize/WEB/H4 */
+h4 {
+  font-family: "General Sans";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 /* FontSize/WEB/P */
 p {
   color: var(--pesto950);
@@ -56,7 +70,7 @@ p {
 }
 
 /* Mobil */
-@media (max-width: 800px) {
+@media (max-width: 400px) {
   /* FontSize/MOBIL/H1 */
   h1 {
     color: var(--pesto950);
@@ -82,6 +96,15 @@ p {
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
+    line-height: normal;
+  }
+
+  /* FontSize/MOBIL/H4 */
+  h4 {
+    font-family: "General Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
     line-height: normal;
   }
   /* FontSize/MOBIL/P */

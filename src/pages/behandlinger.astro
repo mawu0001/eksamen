@@ -1,3 +1,105 @@
 ---
-
+import Layout from "../general/layout.astro";
+import Behandlings from "../components/Behandlings.astro";
+const data = await fetch(
+  "https://jnfsonguvexswcioudjt.supabase.co/rest/v1/behandlinger",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpuZnNvbmd1dmV4c3djaW91ZGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU3NjYyMjksImV4cCI6MjAzMTM0MjIyOX0.Z02awUWrz1wRXwd_Ybyt7-aHDrrAk2vnohh-uoBD2mQ",
+    },
+  }
+).then((res) => res.json());
 ---
+
+<Layout>
+  <section>
+    <div class="localmenu1">
+      <h2>Behandlingsområder</h2>
+      <article class="submenu">
+        <a href="#">Angst</a>
+        <a href="#">Stress</a>
+        <a href="#">Særligt Sensitiv</a>
+        <a href="#">Spiseforstyrrelse</a>
+      </article>
+    </div>
+    <article class="indhold">
+      {
+        data.map((type) => {
+          return <Behandlings data={type} />;
+        })
+      }
+    </article>
+  </section>
+  <section>
+    <div class="localmenu2">
+      <h2>Behandlingstyper</h2>
+      <article class="submenu">
+        <a href="#">Online</a>
+        <a href="#">Walk & Talk</a>
+        <a href="#">Samtale</a>
+      </article>
+    </div>
+    <article class="indhold">
+      {
+        data.map((type) => {
+          return <Behandlings data={type} />;
+        })
+      }
+    </article>
+  </section>
+</Layout>
+
+<style>
+  h2 {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  a {
+    color: var(--Pesto950);
+    text-align: center;
+    font-family: "General Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: fit-content;
+  }
+  .indhold {
+    padding: 0 120px;
+  }
+  .localmenu1 {
+    background-color: var(--pesto300);
+    padding: 70px 90px;
+  }
+  .localmenu1 article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 20px;
+  }
+  .localmenu2 {
+    background-color: var(--flamepea300);
+    padding: 70px 90px;
+  }
+  .localmenu2 article {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+  }
+  @media (max-width: 400px) {
+    a {
+      color: var(--Pesto950);
+      text-align: center;
+      font-family: "General Sans";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+</style>
