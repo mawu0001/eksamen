@@ -1,0 +1,77 @@
+---
+
+
+
+---
+<h2 class="behandling">Behandlingsområder</h2>
+<section> 
+  <div id="heading">  
+   <img  src="../img/talk.webp" alt="" />
+  
+     <img  src="../img/online.webp" alt="" />
+  
+     <img  src="../img/samtale.webp" alt="" />
+
+  </div>
+     <div id="tekst">
+         <p>Walk and talk</p> 
+       <p>Online</p>
+     <p>Samtale</p>
+    </div> 
+    
+
+
+</section>
+
+
+
+<style>
+
+    .behandling{
+        text-align:center;
+    }
+  section {
+    background-color: var(--pesto300);
+    border-radius: 30px;
+    padding: 0px 100px;
+  }
+  #heading {
+      display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+margin-left:10%;
+z-index:2;
+
+  }
+
+  #tekst{
+       display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+margin-left:12%;
+border-radius: 35px;
+background: var(--Flame-Pea-50, #F1E9D9);
+position:relative;
+z-index:1;
+
+
+
+
+  }
+
+  img {
+    width: 72%;
+    height: auto;
+    background-color:: var(--Flame-Pea-300, #EEB283);
+    border-radius: 20px;
+
+  }
+
+  h3 {
+    font-family: var(--secondaryfont);
+  }
+  @media (max-width: 800px);{
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+</style>
