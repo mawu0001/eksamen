@@ -1,0 +1,124 @@
+---
+
+---
+<div><h2>Kontakt</h2></div>
+<div class="formular">
+        <h4 class="book">For at booke en tid, kan du <br> sende mig en anmodning her</h4>
+        <form>
+            <input type="text" name="navn" placeholder="Navn">
+            <input type="email" name="email" placeholder="E-mail">
+            <input type="text" name="emne" placeholder="Emne">
+            <textarea name="besked" placeholder="Besked"></textarea>
+            <button class="send_kontakt" type="submit">KONTAKT</button>
+        </form>
+        <div class="contact_info">
+            <div class="contact_item">
+                <img src="phone_icon.png" alt="Phone">
+                <span>+45 44 44 44 44</span>
+            </div>
+            <div class="contact_item">
+                <img src="email_icon.png" alt="Email">
+                <span>pernille@mail.com</span>
+            </div>
+            <div class="contact_item">
+                <img src="location_icon.png" alt="Location">
+                <span>Aalborg & København</span>
+            </div>
+            <div class="contact_item">
+                <img src="pen_icon.png" alt="CVR">
+                <span>CVR- nr: 404444</span>
+            </div>
+        </div>
+ </div>
+
+ <style>
+    h2{
+        text-align: center;
+    }
+/* formular-------------------------------------------------- */
+.formular{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--pesto300);
+    margin-bottom: 15%;
+}
+.book{
+    font-weight: normal;
+    margin-bottom: 20px;
+    grid-column: span 2;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 15%;
+}
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: var( --flamepea50);
+    font-size: 16px;
+    font-family: var(--secondaryfont);
+}
+textarea {
+    resize: none;
+    height: 100px;
+    padding-top: 10px;
+}
+.send_kontakt{
+     padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: var( --flamepea50);
+    font-weight: bold;
+    cursor: pointer;
+}
+/* kontaktboks---------------------------------------------- */
+.contact_info {
+    background-color: var( --flamepea50);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 26%;
+}
+.contact_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contact_item img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--pesto300);
+    padding: 5px;
+}
+.contact_item span {
+    font-size: 16px;
+}
+/* Mobil */
+@media (max-width: 800px) {
+.formular{
+    background-color: var(--pesto300);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20%;
+    }
+    .contact_info {
+    background-color: var( --flamepea50);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 26%;
+    }
+
+}
+ </style>
