@@ -1,0 +1,127 @@
+---
+
+---
+
+<section>
+  <div class="box">
+    <div class="indhold">
+      <p>
+        "Fantastisk oplevelse! Terapeuten er ekspert i særligt sensitive <br /> og
+        stress. Hendes walk and talk-sessioner var forfriskende, og <br /> online
+        samtalerne var praktiske. Stærkt anbefalet!" <br />
+        <br /> - Kvinde, 30 år
+      </p>
+      <p>
+        "En god oplevelse! Terapeuten udstråler forståelse og empati, <br /> som
+        gjorde hele sessionen utroligt givende. Jeg følte mig virkelig <br /> hørt
+        og forstået. Jeg kan kun give mine varmeste anbefalinger!" <br />
+        <br /> - Mand, 42 år
+      </p>
+
+      <p>
+        "En helt fantastisk rejse! Pernille guidede mig gennem mine <br /> følelser
+        og tanker med en rolig og kærlig tilgang. Jeg forlod hver session <br />
+        mere forbundet med mig selv. En ægte perle i terapiverdenen!"
+        <br />
+        <br /> - Kvinde, 27 år
+      </p>
+    </div>
+    <div class="button_container">
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 150px;
+  }
+  .box {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 900px;
+    border-radius: 20px;
+    background-color: var(--flamepea300);
+    padding: 20px 100px;
+  }
+
+  .indhold {
+    text-align: center;
+  }
+
+  .button_container {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    right: 0;
+    padding: 0 40px;
+  }
+
+  button {
+    background-color: transparent;
+    color: var(--pesto950);
+    border: none;
+    font-size: 44px;
+    font-weight: lighter;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 800px) {
+    .box {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+      max-width: 100%;
+    }
+
+    .button_container {
+      position: static;
+      margin-top: 20px;
+      transform: none;
+      justify-content: center;
+    }
+
+    button {
+      font-size: 24px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".indhold > p");
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.style.display = "block";
+        } else {
+          slide.style.display = "none";
+        }
+      });
+    }
+
+    showSlide(currentSlide);
+
+    document.querySelector(".next").addEventListener("click", function () {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    document.querySelector(".prev").addEventListener("click", function () {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+  });
+</script>
