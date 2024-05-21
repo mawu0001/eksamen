@@ -1,0 +1,113 @@
+---
+
+---
+<section>
+    <div class="cirkel">
+    <h2 class="priser">Priser</h2>
+    </div>
+<article class="priser_tabel">
+    <h4 class="p_titel">Individuel samtale</h4>
+    <p class="tid">60 minutter</p>
+    <p class="pris">650 DKK</p>
+    <hr>
+    <h4 class="p_titel">Walk & talk</h4>
+    <p class="tid">60 minutter</p>
+    <p class="pris">650 DKK</p>
+    <hr>
+    <h4 class="p_titel">Online</h4>
+    <p class="tid">60 minutter</p>
+    <p class="pris">650 DKK</p>
+    <hr>
+    <h4 class="p_titel">Forløb</h4>
+    <p class="tid">60 minutter x 8 samtaler</p>
+    <p class="pris">5000 DKK</p>
+    <hr>
+    <h4 class="p_titel">Henvisning og studierabat</h4>
+    <p class="tid">10% rabat fratrukket </p>
+    <p class="pris">585 DKK</p>
+</article>
+<div class="boks">
+    <p class="gebyr">Hvis du ikke kan overholde denne tidsfrist, 
+    kan der pålægges et gebyr svarende til den 
+    fulde konsultationspris</p>
+</div>
+</section>
+
+<!-- styles -->
+<style>
+.priser_tabel{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    background-color: var(--flamepea50);
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.pris{
+    grid-column: 2;
+    text-align: right;
+    font-family: "General Sans";
+}
+.p_titel{
+grid-column: 1;
+}
+.tid{
+    grid-column: 1;
+    font-family: "General Sans";
+}
+hr{
+    grid-column: 1/span 2;
+    color: var(--pesto950);
+}
+.priser{
+    text-align: center;
+  background-color: #EEB283;
+  border-radius: 50% 50% 0 0;
+  width: fit-content;
+  padding: 0 50px;
+}
+.cirkel{
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2%;
+}
+.boks{
+    background-color: #EEB283;
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 28%;
+  margin-right: 28%;
+  border-radius: 0px 0px 35px 35px;
+  margin-bottom: 5%;
+  padding: 1.1%;
+}
+.gebyr{
+    text-align: center;
+}
+/* Mobil */
+@media (max-width: 800px) {
+  .boks{
+    background-color: #EEB283;
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 16%;
+  margin-right: 16%;
+  border-radius: 0px 0px 35px 35px;
+  margin-bottom: 5%;
+  padding: 1.1%;
+    }
+    .gebyr{
+    text-align: center;
+    padding: 2%;
+    } 
+    .priser{
+    text-align: center;
+  background-color: #EEB283;
+  border-radius: 50% 50% 0 0;
+  width: fit-content;
+  padding: 0 100px;
+    }
+}
+</style>
