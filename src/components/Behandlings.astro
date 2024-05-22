@@ -1,11 +1,11 @@
 ---
-const { data } = Astro.props;
+const { indhold } = Astro.props;
 ---
 
-<article>
-  <h3>{data.title}</h3>
+<article id={indhold.slug}>
+  <h3>{indhold.title}</h3>
   <p>
-    {data.text}
+    {indhold.text}
   </p>
 </article>
 

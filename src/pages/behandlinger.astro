@@ -1,6 +1,7 @@
 ---
 import Layout from "../general/layout.astro";
 import Behandlings from "../components/Behandlings.astro";
+import Knap from "../components/Knap.astro";
 const data = await fetch(
   "https://jnfsonguvexswcioudjt.supabase.co/rest/v1/behandlinger",
   {
@@ -11,6 +12,9 @@ const data = await fetch(
     },
   }
 ).then((res) => res.json());
+
+const Type = data.filter((behandling) => behandling.kategori == "area");
+const Area = data.filter((behandling) => behandling.kategori == "type");
 ---
 
 <Layout>
@@ -18,16 +22,16 @@ const data = await fetch(
     <div class="localmenu1">
       <h2>Behandlingsområder</h2>
       <article class="submenu">
-        <a href="#">Angst</a>
-        <a href="#">Stress</a>
-        <a href="#">Særligt Sensitiv</a>
-        <a href="#">Spiseforstyrrelse</a>
+        <a href="#angst">Angst</a>
+        <a href="#stress">Stress</a>
+        <a href="#s_sensitiv">Særligt Sensitiv</a>
+        <a href="#spiseforstyrrelse">Spiseforstyrrelse</a>
       </article>
     </div>
     <article class="indhold">
       {
-        data.map((type) => {
-          return <Behandlings data={type} />;
+        Type.map((data) => {
+          return <Behandlings indhold={data} />;
         })
       }
     </article>
@@ -36,18 +40,25 @@ const data = await fetch(
     <div class="localmenu2">
       <h2>Behandlingstyper</h2>
       <article class="submenu">
-        <a href="#">Online</a>
-        <a href="#">Walk & Talk</a>
-        <a href="#">Samtale</a>
+        <a href="#online">Online</a>
+        <a href="#walk_&_talk">Walk & Talk</a>
+        <a href="#samtale">Samtale</a>
       </article>
     </div>
     <article class="indhold">
       {
-        data.map((type) => {
-          return <Behandlings data={type} />;
+        Area.map((data) => {
+          return <Behandlings indhold={data} />;
         })
       }
     </article>
+  </section>
+  <section>
+    <p>
+      Hvis du føler, mine tilbud kan hjælpe dig, så tøv ikke med at booke en
+      tid!
+    </p>
+    <Knap title="Book tid" link="priserkontakt.html" />
   </section>
 </Layout>
 
