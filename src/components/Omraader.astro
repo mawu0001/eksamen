@@ -1,78 +1,85 @@
 ---
 
-
-
 ---
+
 <h2 class="behandling">Behandlingsområder</h2>
-<section> 
-  <div id="heading">  
-   <img  src="../img/talk.webp" alt="" />
-  
-     <img  src="../img/online.webp" alt="" />
-  
-     <img  src="../img/samtale.webp" alt="" />
+<section>
+  <div id="heading">
+    <div class="image_container">
+      <img src="../img/talk.webp" alt="" />
+      <h3>Walk and talk</h3>
+    </div>
 
+    <div class="image_container">
+      <img src="../img/online.webp" alt="" />
+      <h3>Online</h3>
+    </div>
+
+    <div class="image_container">
+      <img src="../img/samtale.webp" alt="" />
+      <h3>Samtale</h3>
+    </div>
   </div>
-     <div id="tekst">
-         <p>Walk and talk</p> 
-       <p>Online</p>
-     <p>Samtale</p>
-    </div> 
-    
 
-
-</section>
-
-
-
-<style>
-
-    .behandling{
-        text-align:center;
+  <style>
+    .behandling {
+      text-align: center;
     }
-  section {
-    background-color: var(--pesto300);
-    border-radius: 30px;
-    padding: 0px 100px;
-    margin-top:100px;
-  }
-  #heading {
-      display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-margin-left:10%;
-z-index:2;
 
-  }
+    section {
+      background: var(--pesto300);
+      border-radius: 30px;
+    }
+    #heading {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
 
-  #tekst{
-       display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-margin-left:12%;
-border-radius: 35px;
-background: var(--Flame-Pea-50, #F1E9D9);
-position:relative;
-z-index:1;
+    #test {
+      background: green;
+      height: 400px;
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .image_container {
+      background-color: var(--flamepea300);
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      width: fit-content;
+      padding: 40px 30px;
+      position: relative;
+    }
 
+    h3 {
+      position: absolute;
+      background: var(--flamepea50);
+      padding: 5px 10px;
+      border-radius: 30px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+    }
 
-
-
-  }
-
-  img {
-    width: 72%;
-    height: auto;
-    background-color:: var(--Flame-Pea-300, #EEB283);
-    border-radius: 20px;
-
-  }
-
-  h3 {
-    font-family: var(--secondaryfont);
-  }
-  @media (max-width: 800px);{
-    section{
+    @media (max-width: 800px) {
+      section {
         display: flex;
         flex-direction: column;
+      }
     }
-  }
-</style>
+    @media (max-width: 450px) {
+      #heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+      }
+    }
+  </style>
+</section>
