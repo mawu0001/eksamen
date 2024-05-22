@@ -1,26 +1,19 @@
 ---
 import Knap from "./Knap.astro";
-
-
 ---
 
 <section>
-  <div id="heading">  
+  <div id="heading">
     <h2>Plads til at vokse og gro</h2>
     <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est
-      ectetur adipisicing elit. Deserunt 
-        
-        <Knap title="Læs mere" link="/pages/ommig.html" />
-    </p>   
+      Gennem terapi kan vi opdage nye lag af os selv og lære at håndtere udfordringer med styrke og visdom.
+
+      <Knap title="Læs mere" link="/pages/ommig.html" />
+    </p>
   </div>
 
-
-     <img src="../img/vokseoggro.webp" alt="" />
-
+  <img src="../img/vokseoggro.webp" alt="" />
 </section>
-
-
 
 <style>
   section {
@@ -28,31 +21,38 @@ import Knap from "./Knap.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 27px 100px;
-     margin-top:100px;
-  }
-  #heading {
-    grid-column: 1;
-    padding:30px;
-    margin-left:24%;
-  }
+    margin-top: 100px;
 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
 
   img {
     width: 62%;
     height: auto;
     grid-column: 2;
     align-self: center;
-    display:flex;
-    justify-self:center;
-    
+    display: flex;
+    justify-self: center;
   }
   h3 {
     font-family: var(--secondaryfont);
   }
-  @media (max-width: 450px);{
-    section{
-        display: flex;
-        flex-direction: column;
+  @media (max-width: 450px) {
+    section {
+      grid-template-columns: 1fr;
+    }
+    h2 {
+      font-size: 2rem;
+      top: 31%;
+      margin-left: 10%;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
     }
   }
 </style>
