@@ -12,9 +12,11 @@ font-family: 'Gambarino', serif;
   --flamepea50: #f1e9d9;
   --flamepea300: #eeb283;
   --flamepea400: #e58952;
+  --flamepea700: #ad3f21;
   --pesto300: #c2c294;
   --pesto950: #1f2013;
   --cornflowerblue: #9ac3f6;
+  --cornflowerblue2: #dde9fc;
 }
 /* main {
   margin: 0 120px;
