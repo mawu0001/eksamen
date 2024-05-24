@@ -20,6 +20,16 @@ const { title, link } = Astro.props;
     font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
+    transition:
+      transform 0.3s,
+      background-color 0.3s;
+  }
+
+  .button:hover {
+    background-color: var(--cornflowerblue800);
+    scale: 1.02;
+    color: var(--flamepea50);
+    cursor: pointer;
   }
 </style>
 <script>
