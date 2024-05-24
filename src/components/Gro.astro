@@ -5,49 +5,49 @@ import Knap from "./Knap.astro";
 <section>
   <div id="heading">
     <h2>Plads til at vokse og gro</h2>
-    <p>
-      Gennem terapi kan vi opdage nye lag af os selv og lære at håndtere udfordringer med styrke og visdom.
-
-      <Knap title="Læs mere" link="/pages/ommig.html" />
-    </p>
+    <p>Gennem terapi kan vi opdage nye lag af os selv og lære at håndtere udfordringer med styrke og visdom.</p>
   </div>
 
   <img src="../img/vokseoggro.webp" alt="" />
+  <div id="knap">
+    <Knap title="Læs mere" link="/pages/ommig.html" />
+  </div>
 </section>
 
 <style>
   section {
-    background-color: var(--pesto300);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 27px 100px;
-    margin-top: 100px;
+background-color: var(--pesto300);
+display: grid;
+grid-template-columns: 1fr 1fr;
+padding: 20px 220px;
+margin-top: 100px;
+align-items: center;
+position: relative;
+  }
 
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
+  #knap {
+    align-content: center;
+    display: flex;
+  
   }
 
   img {
-    width: 62%;
-    height: auto;
+ 
     grid-column: 2;
-    align-self: center;
+
     display: flex;
-    justify-self: center;
+    justify-self: end;
+    grid-row:1/ span 2;
   }
   h3 {
     font-family: var(--secondaryfont);
   }
-  @media (max-width: 450px) {
+
+    @media (max-width: 800px) {
     section {
-      grid-template-columns: 1fr;
-    }
-    h2 {
-      font-size: 2rem;
-      top: 31%;
-      margin-left: 10%;
+     padding: 20px 120px;
+       display: flex;
+        flex-direction: column;'
     }
 
     img {
@@ -55,4 +55,17 @@ import Knap from "./Knap.astro";
       height: auto;
     }
   }
+  @media (max-width: 450px) {
+    section {
+     padding: 20px 70px;
+       display: flex;
+        flex-direction: column;'
+    }
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
+
+
 </style>
