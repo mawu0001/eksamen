@@ -2,84 +2,122 @@
 
 ---
 
-<h2 class="behandling">Behandlingsområder</h2>
 <section>
-  <div id="heading">
-    <div class="image_container">
-      <img src="../img/talk.webp" alt="" />
-      <h3>Walk and talk</h3>
-    </div>
+  <h2 class="behandling">Behandlingsområder</h2>
+  <section id="oversigt">
+    <article id="indhold">
+      <a class="image_container" href="behandlinger.html">
+        <img src="../img/talk.webp" alt=" billede af rapsmark" />
+        <h3>Walk and talk</h3>
+      </a>
 
-    <div class="image_container">
-      <img src="../img/online.webp" alt="" />
-      <h3>Online</h3>
-    </div>
+      <a class="image_container" href="behandlinger.html">
+        <img src="../img/online.webp" alt="billede af computer udenfor" />
+        <h3>Online</h3>
+      </a>
 
-    <div class="image_container">
-      <img src="../img/samtale.webp" alt="" />
-      <h3>Samtale</h3>
-    </div>
-  </div>
-
-  <style>
-    .behandling {
-      text-align: center;
-    }
-
-    section {
-      background: var(--pesto300);
-      border-radius: 30px;
-    }
-    #heading {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-    }
-
-    #test {
-      background: green;
-      height: 400px;
-      z-index: 100;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .image_container {
-      background-color: var(--flamepea300);
-      border-radius: 30px;
-      display: flex;
-      justify-content: center;
-      width: fit-content;
-      padding: 40px 30px;
-      position: relative;
-    }
-
-    h3 {
-      position: absolute;
-      background: var(--flamepea50);
-      padding: 5px 10px;
-      border-radius: 30px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 800px) {
-      section {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-    @media (max-width: 450px) {
-      #heading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 30px;
-      }
-    }
-  </style>
+      <a class="image_container" href="behandlinger.html">
+        <img src="../img/samtale.webp" alt="billede af rum med stole" />
+        <h3>Samtale</h3>
+      </a>
+    </article>
+  </section>
 </section>
+
+<style>
+  section {
+  }
+
+  .behandling {
+    text-align: center;
+    margin: 100px 0 50px;
+  }
+
+  #oversigt {
+    background: var(--pesto300);
+    border-radius: 30px;
+    height: 300px;
+    overflow: visible;
+    display: flex;
+    justify-content: center; /* Centers the child element horizontally */
+    align-items: center; /* Centers the child element vertically */
+    margin: 130px 25px 200px;
+  }
+
+  #indhold {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%; /* Make sure it doesn't overflow its parent */
+  }
+
+  .image_container {
+    background-color: var(--flamepea300);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 40px 30px;
+    position: relative;
+    transition: transform 0.3s;
+  }
+  .image_container:hover {
+    scale: 1.05;
+  }
+
+  h3 {
+    position: absolute;
+    background: var(--flamepea50);
+    padding: 5px 10px;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+    transform-origin: center;
+    cursor: pointer;
+  }
+  h3:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+
+  @media (max-width: 800px) {
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+      justify-content: center; /* Center items vertically */
+      margin: 0; /* Adjust margins if needed */
+    }
+    #oversigt {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center child elements vertically */
+      align-items: center; /* Center child elements horizontally */
+      height: 1600px; /* Adjust height as needed */
+      width: 250px; /* Adjust width as needed */
+      margin: 0;
+    }
+    #indhold {
+      width: auto;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    h3 {
+      width: 80%;
+      padding: 10px 15px;
+    }
+  }
+  @media (max-width: 450px) {
+    #indhold {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+      width: auto;
+    }
+  }
+</style>

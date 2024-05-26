@@ -2,68 +2,62 @@
 import Knap from "./Knap.astro";
 ---
 
-<section id="img_container" >
-        <img src="../img/havet.webp" alt="">
+<section >
+  <div id="image_container">
+      <img src="../img/havet.webp" alt=" billede af fynshoved">
+    </div>
   <article id="samlet_tilbud">
     <div id="heading">
     <h2>Hvad kan jeg tilbyde dig?</h2>
-    <p>-en gratis uforpligtende første samtale</p>
+    <p id="subtitel">-en gratis uforpligtende første samtale</p>
     </div>
     <p>
    Som terapeut kan jeg tilbyde dig en tryg og støttende terapiprocess, hvor du har mulighed for at udforske og arbejde med dine udfordringer på en dybdegående og meningsfuld måde. Uanset om du vælger almindelige samtaler på 60 minutter, online samtaler eller en unik walk&talk-oplevelse, vil jeg skræddersy min tilgang til dine individuelle behov og præferencer.
-
    Sammen vil vi udforske dine tanker, følelser og oplevelser med fokus på at skabe klarhed, forståelse og personlig vækst. Mit mål er at støtte dig på din rejse mod større trivsel, selvopdagelse og livsglæde.
     </p>
-    <Knap title="Læs mere" link="/pages/ommig.html" />
+    <Knap title="Læs mere" link="ommig.html" />
   </article> 
 </section>
 
 <style>
+  #image_container{
+    height: 700px;
+  overflow: hidden;
+  }
     img{
-        width: 100vw;
+        width: 100%;
         height:auto;
     }
   section {
-    /* background-image: url("../img/havet.webp"); */
-    /* background-repeat: no-repeat;
-    display: grid;
-    grid-template-rows: 1fr 1fr; */
-    /* padding: 10px 100px; */
-    
-  }
-  #img_container{
-position: relative;
-display:inline-block;
- margin-top:100px;
-
+  position: relative;
+  /* display:inline-block; */
+  margin-top:100px;
   }
 
   #heading{
-  margin-left:22%;
   margin-bottom: 5%;
-
+  text-align: center;
   }
-
   #samlet_tilbud{
-border-radius: 30px;
-background: rgba(229, 137, 82, 0.70);
-position:absolute;
-padding: 50px;
-width:1000px;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-display:grid;
-
-   flex-direction: column;
-    align-items: center;
-    text-align: center;
-    
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(229, 137, 82, 0.70);
+  position:absolute;
+  padding: 50px;
+  width:1000px;
+  row-gap: 15px;
   }
 
   p{
     column-count: 2;
     column-gap: 20px;
+  }
+  #subtitel{
+    column-count: 1;
   }
 /* 
   #tilbud{
@@ -80,9 +74,17 @@ display:grid;
   h3 {
     font-family: var(--secondaryfont);
   }
+  @media (max-width: 800px);{
+    section img{
+      display: none
+    }
+    #samlet_tilbud{
+   width:700px;
+    }
+  }
   @media (max-width: 450px);{
     #samlet_tilbud{
-  grid-template-columns: 1fr;
+  
     }
   }
 </style>
