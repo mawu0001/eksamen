@@ -30,6 +30,7 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
         <a href="#spiseforstyrrelse">Spiseforstyrrelse</a>
       </article>
     </div>
+    <a id="arrow" href="#"><img src="/svg/arrowup.svg" alt="pil op" /></a>
     <article class="indhold">
       {
         Type.map((data) => {
@@ -65,6 +66,13 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
 </Layout>
 
 <style>
+  #arrow {
+    position: fixed;
+    right: 20px; /* Distance from the right edge of the viewport */
+    bottom: 20px; /* Distance from the bottom edge of the viewport */
+    z-index: 1000; /* Ensure it appears above other elements */
+    cursor: pointer;
+  }
   h2 {
     text-align: center;
     padding-bottom: 40px;
@@ -136,6 +144,9 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
     }
     h2 {
       text-align: left;
+    }
+    #arrow img {
+      width: 90%;
     }
   }
 </style>
