@@ -20,6 +20,7 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
 
 <Layout>
   <Scrollprogressbar />
+  <a id="arrow" href="#"><img src="/svg/arrowup.svg" alt="pil op" /></a>
   <section>
     <div class="localmenu1">
       <h2>Behandlingsområder</h2>
@@ -30,7 +31,6 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
         <a href="#spiseforstyrrelse">Spiseforstyrrelse</a>
       </article>
     </div>
-    <a id="arrow" href="#"><img src="/svg/arrowup.svg" alt="pil op" /></a>
     <article class="indhold">
       {
         Type.map((data) => {
@@ -68,9 +68,9 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
 <style>
   #arrow {
     position: fixed;
-    right: 20px; /* Distance from the right edge of the viewport */
-    bottom: 20px; /* Distance from the bottom edge of the viewport */
-    z-index: 1000; /* Ensure it appears above other elements */
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
     cursor: pointer;
   }
   h2 {
