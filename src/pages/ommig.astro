@@ -1,10 +1,133 @@
 ---
 import Layout from "../general/layout.astro";
-// import Style from "../general/style.css";
 import "../general/style.css";
 ---
 <Layout>
-<div class="container">
+
+
+<section>
+  <div>
+    <h2>Om mig</h2>
+    <p>
+      Jeg er psykoterapeut med i alt fire års terapeutisk uddannelse. Min uddannelse har givet mig en dyb forståelse for 
+      menneskelig sensitivitet og empati, og jeg har specialiseret mig i at hjælpe klienter med at håndtere angst og stress. <br><br>  
+      Gennem min professionelle træning har jeg lært at skabe et trygt og  støttende rum, hvor du kan føle dig set og hørt.    
+      Jeg bruger metoder som mindfulness, åndedrætsøvelser og  kognitiv adfærdsterapi for at hjælpe dig med at finde indre ro og 
+      fremme din personlige vækst og trivsel.
+    </p>
+  </div>
+   <img src="../img/pernilleommig.webp" alt="Pernille" />
+</section>
+
+
+
+<section>
+   <div>
+    <h2>Uddannelse</h2>
+    <p>Mit navn er Pernille, og jeg er en autoriseret psykoterapeut, uddannet fra EFT Instituttet i København. <br><br>
+     Jeg har altid haft en passion for at arbejde med mennesker, og denne  passion har præget hele mit arbejdsliv. At uddanne 
+     mig til psykoterapeut har været den bedste beslutning, jeg nogensinde har taget, da min egen særlige sensitivitet giver 
+     mig en unik evne til at forstå og støtte mine klienter. Jeg brænder  for at skabe et trygt og empatisk rum, hvor vi 
+     sammen kan udforske dine udfordringer og fremme din personlige vækst og trivsel.</p>
+  </div>
+  <div>
+    <ul>
+      <li>2019-2024: Psykoterapeutuddannelsen ved EFT -institutet  i København</li>
+      <li>2015: Essens’ Grundkursus til psykoterapeutuddannelsen</li>
+      <li>2013-2014: Kursus; Lær psylpterapeutiske værktøjer ved Ilse Strand </li>
+      <li>2011: University of Gävle: Developmental Psykology</li>
+      <li>1999: Ophold i Australien; Kursus: indtroduction to Psykology </li>
+    </ul>
+  </div>
+</section>
+
+<div class="havet">
+    <img src="../img/havet.webp" alt="Havet"/>
+</div>
+
+
+
+
+<style>
+
+section:first-of-type {
+  background-color: var(--pesto300);
+}
+
+section {
+  /* background-color: var(--pesto300); */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 10px 100px;
+}
+
+img {
+  width: 80%; 
+  height: auto;
+  align-self: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.havet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.havet img {
+    width: 50%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 450px) {
+  section {
+    display: flex;
+    flex-direction: column; 
+    padding: 10px; 
+  }
+
+  .havet img {
+    width: 100%;
+    height: auto;
+}
+
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
     <div class="col">
         <h2>Uddannelse</h2>
         <p class="years">2015-2024</p>
@@ -112,4 +235,4 @@ import "../general/style.css";
 
 }
 
-</style>
+</style> -->
