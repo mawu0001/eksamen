@@ -30,7 +30,7 @@ import Knap from "./Knap.astro";
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
-    padding: 40px 170px;
+    padding: 5% 10%;
     column-gap: 40px;
   }
   #heading {
@@ -54,7 +54,7 @@ import Knap from "./Knap.astro";
   }
   @media (max-width: 800px) {
     section {
-      padding: 20px 120px;
+      /* padding: 20px 120px; */
       display: flex;
       flex-direction: column;
     }
@@ -70,13 +70,14 @@ import Knap from "./Knap.astro";
   }
   @media (max-width: 450px) {
     section {
-      padding: 20px 70px;
-      display: flex;
-      flex-direction: column;
+      /* padding: 20px 70px; */
+      /* display: flex;
+      flex-direction: column; */
     }
     img {
       width: 300px;
       height: auto;
+      align-self: center;
     }
   }
 </style>

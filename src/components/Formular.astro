@@ -3,78 +3,80 @@
 ---
 
 <div class="formular">
-    <div><h2>Kontakt</h2>
-        <h4 class="book">For at booke en tid, kan du <br> sende mig en anmodning her</h4>
-        </div>
-        <form>
-            <input type="text" name="navn" placeholder="Navn">
-            <input type="email" name="email" placeholder="E-mail">
-            <input type="text" name="emne" placeholder="Emne">
-            <textarea name="besked" placeholder="Besked"></textarea>
-            <button class="send_kontakt" type="submit">Send</button>
-        </form>
-        <div class="contact_info">
-            <div class="contact_item">
-                <img src="/public/svg/telefon.svg" alt="Phone">
-                <span>+45 44 44 44 44</span>
-            </div>
-            <div class="contact_item">
-                <img src="/public/svg/mail.svg" alt="Email">
-                <span>pernille@mail.com</span>
-            </div>
-            <div class="contact_item">
-                <img src="/public/svg/map.svg" alt="Location">
-                <span>Aalborg & København</span>
-            </div>
-            <div class="contact_item">
-                <img src="/public/svg/cvr.svg" alt="CVR">
-                <span>CVR- nr: 404444</span>
-            </div>
-        </div>
- </div>
+  <div>
+    <h2>Kontakt</h2>
+    <h4 class="book">
+      For at booke en tid, kan du <br /> sende mig en anmodning her
+    </h4>
+  </div>
+  <form>
+    <input type="text" name="navn" placeholder="Navn" />
+    <input type="email" name="email" placeholder="E-mail" />
+    <input type="text" name="emne" placeholder="Emne" />
+    <textarea name="besked" placeholder="Besked"></textarea>
+    <button class="send_kontakt" type="submit">Send</button>
+  </form>
+  <div class="contact_info">
+    <div class="contact_item">
+      <img src="/public/svg/telefon.svg" alt="Phone" />
+      <span>+45 44 44 44 44</span>
+    </div>
+    <div class="contact_item">
+      <img src="/public/svg/mail.svg" alt="Email" />
+      <span>pernille@mail.com</span>
+    </div>
+    <div class="contact_item">
+      <img src="/public/svg/map.svg" alt="Location" />
+      <span>Aalborg & København</span>
+    </div>
+    <div class="contact_item">
+      <img src="/public/svg/cvr.svg" alt="CVR" />
+      <span>CVR- nr: 404444</span>
+    </div>
+  </div>
+</div>
 
- <style>
-    h2{
-    text-align: center;
+<style>
+  h2 {
     padding-top: 25px;
     padding-bottom: 10px;
-    }
-/* formular-------------------------------------------------- */
-.formular{
+  }
+  /* formular-------------------------------------------------- */
+  .formular {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--pesto300);
     margin-bottom: 15%;
-    align-items: center;
-}
-.book{
+    padding: 10% 15%;
+    column-gap: 20px;
+  }
+  .book {
     font-weight: normal;
-    grid-column: span 2;
-    text-align: center;
-    margin-bottom: -8%;
-}
-form{
+  }
+  form {
     display: flex;
     flex-direction: column;
-    margin: 15%;
     grid-column: 1;
-}
-input, textarea {
+    margin-top: 20px;
+  }
+  input,
+  textarea {
     margin-bottom: 15px;
     padding: 10px;
     border: none;
     border-radius: 30px;
-    background-color: var( --flamepea50);
+    background-color: var(--flamepea50);
     font-size: 16px;
     font-family: var(--secondaryfont);
-}
-textarea {
+    width: 70%;
+  }
+  textarea {
     resize: none;
     height: 100px;
     padding-top: 10px;
-}
-.send_kontakt{
-    background-color: var( --flamepea50);
+  }
+  .send_kontakt {
+    background-color: var(--flamepea50);
     font-weight: bold;
     cursor: pointer;
     width: 200px;
@@ -91,72 +93,86 @@ textarea {
     transition:
       transform 0.3s,
       background-color 0.3s;
-    align-self: center;
-    margin-bottom: -10%;
-}
-.send_kontakt:hover {
+    align-self: start;
+  }
+  .send_kontakt:hover {
     background-color: var(--cornflowerblue800);
     scale: 1.02;
     color: var(--flamepea50);
     cursor: pointer;
   }
-/* kontaktboks---------------------------------------------- */
-.contact_info {
-    background-color: var( --flamepea50);
+  /* kontaktboks---------------------------------------------- */
+  .contact_info {
+    background-color: var(--flamepea50);
     padding: 20px;
     border-radius: 30px;
     text-align: left;
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 300px;
+    width: 70%;
+    aspect-ratio: 1/1;
     gap: 10px;
     justify-content: space-evenly;
-    margin-bottom: 10px;
-    align-self: center;
-}
-.contact_item {
+    justify-self: right;
+    margin-top: 20px;
+  }
+  .contact_item {
     display: flex;
     align-items: center;
     gap: 20px;
-}
-.contact_item img {
+  }
+  .contact_item img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: var(--pesto300);
     padding: 5px;
-}
-.contact_item span {
+  }
+  .contact_item span {
     font-size: 16px;
-}
-/* Mobil */
-@media (max-width: 450px) {
-.formular{
-    background-color: var(--pesto300);
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20%;
+  }
+  @media (max-width: 800px) {
+    .formular {
+      display: flex;
+      flex-direction: column;
     }
     .contact_info {
-    background-color: var( --flamepea50);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10%;
+      width: 75%;
+      align-self: center;
     }
-    input, textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: none;
-    border-radius: 25px;
-    background-color: var( --flamepea50);
-    font-size: 16px;
-    font-family: var(--secondaryfont);
-    width: 300px;
-}
-}
- </style>
+    input,
+    textarea {
+      width: 75%;
+      align-self: center;
+    }
+    h2,
+    h4 {
+      text-align: center;
+    }
+    form {
+      margin-bottom: 50px;
+    }
+    .send_kontakt {
+      align-self: center;
+    }
+  }
+  /* Mobil */
+  @media (max-width: 450px) {
+    .formular {
+      background-color: var(--pesto300);
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20%;
+      /* padding: 30px 70px; */
+    }
+    .contact_info {
+      background-color: var(--flamepea50);
+      padding: 10px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20%;
+    }
+  }
+</style>
