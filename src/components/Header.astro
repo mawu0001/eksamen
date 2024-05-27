@@ -1,30 +1,28 @@
 ---
 
 ---
+
 <header>
-        <div class="logo">
-            <a href="index.html"> 
-              <p class= "logo"> Pernille Grønhøj</p>
-            </a>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="ommig">OM MIG</a></li>
-                <li><a href="behandlinger">BEHANDLINGER</a></li>
-                <li><a href="priserkontakt">PRISER/KONTAKT</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </nav>
-    </header>
-
-
+  <div class="logo">
+    <a href="index.html">
+      <p class="logo">Pernille Grønhøj</p>
+    </a>
+  </div>
+  <nav>
+    <ul class="menu">
+      <li><a href="ommig.html">OM MIG</a></li>
+      <li><a href="behandlinger.html">BEHANDLINGER</a></li>
+      <li><a href="priserkontakt.html">PRISER/KONTAKT</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+</header>
 
 <style>
-
   p {
     color: var(--pesto950);
     font-family: "General Sans";
@@ -35,224 +33,218 @@
     text-transform: uppercase;
   }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-  position: sticky;
-  background-color: var(--flamepea50);
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  color: var(--pesto950);
-  font-family: "General Sans";
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 600;
-}
-
-.logo a{
-  text-decoration: none;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
-.menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-li a{
-  color: var(--Pesto950);
-  font-family: "General Sans";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
-.menu li {
-  margin-right: 20px;
-}
-
-.menu li:last-child {
-  margin-right: 0;
-}
-
-.menu a {
-  display: block;
-  padding: 10px;
-  color: var(--pesto950);
-  text-decoration: none;
-  transition: color 0.3s;
-  text-align: end;
-  font-size: 1rem;
-}
-
-.menu a:hover {
-  color: var(--pesto300);
-}
-
-.burger {
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.burger .line {
-  width: 100%;
-  height: 2px;
-  background-color: var(--pesto950);
-  margin-bottom: 5px;
-  transition: 0.2s linear;
-}
-.burger {
-  display: none;
-}
-
-/* Mobil */
-
-@media screen and (max-width: 450px) {
-  .menu {
-    display: none;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    position: sticky;
     background-color: var(--flamepea50);
-  }
-  .burger {
-    display: block;
+    top: 0;
+    z-index: 1000;
   }
 
   .logo {
-  color: var(--pesto950);
-  font-family: "General Sans";
-  font-size: 0.6rem;
-  font-style: normal;
-  font-weight: 600;
+    color: var(--pesto950);
+    font-family: "General Sans";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
   }
 
-  .burger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    transition: 0.2s linear;
+  .logo a {
+    text-decoration: none;
   }
 
-  .burger.active .line:nth-child(2) {
-    opacity: 0;
-    transition: 0.15s linear;
-  }
-
-  .burger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-    transition: 0.2s linear;
-  }
-
-  nav.active .menu {
+  nav {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    padding-bottom: 30px;
   }
-
-  nav.active .menu li {
-    margin: 10px 20px;
-  }
-
-  nav.active .menu a {
-    font-size: 14px;
-  }
-}
-
-
-/* Tablet */
-
-
-@media screen and (max-width: 800px) {
 
   .menu {
-    display: none;
-    background-color: var(--flamepea50);
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li a {
+    color: var(--Pesto950);
+    font-family: "General Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .menu li {
+    margin-right: 20px;
+  }
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: var(--pesto950);
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: end;
+    font-size: 1rem;
+  }
+
+  .menu a:hover {
+    color: var(--pesto300);
+  }
+
+  .burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--pesto950);
+    margin-bottom: 5px;
+    transition: 0.2s linear;
   }
   .burger {
-    display: block;
-    /* margin-left: 200px; */
+    display: none;
   }
 
-  .logo {
-  color: var(--pesto950);
-  font-family: "General Sans";
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 600;
-  /* margin-left: -20px; */
+  /* Mobil */
+
+  @media screen and (max-width: 450px) {
+    .menu {
+      display: none;
+      background-color: var(--flamepea50);
+    }
+    .burger {
+      display: block;
+    }
+
+    .logo {
+      color: var(--pesto950);
+      font-family: "General Sans";
+      font-size: 0.6rem;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+
+    nav.active .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      padding-bottom: 30px;
+    }
+
+    nav.active .menu li {
+      margin: 10px 20px;
+    }
+
+    nav.active .menu a {
+      font-size: 14px;
+    }
   }
 
-  .burger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    transition: 0.2s linear;
-  }
+  /* Tablet */
 
-  .burger.active .line:nth-child(2) {
-    opacity: 0;
-    transition: 0.15s linear;
-  }
+  @media screen and (max-width: 800px) {
+    .menu {
+      display: none;
+      background-color: var(--flamepea50);
+    }
+    .burger {
+      display: block;
+      /* margin-left: 200px; */
+    }
 
-  .burger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-    transition: 0.2s linear;
-  }
+    .logo {
+      color: var(--pesto950);
+      font-family: "General Sans";
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 600;
+      /* margin-left: -20px; */
+    }
 
-  nav.active .menu {
-    /* display: block; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-  }
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
 
-  nav.active .menu li {
-    margin: 10px 20px;
-  }
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
 
-  nav.active .menu a {
-    font-size: 18px;
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+
+    nav.active .menu {
+      /* display: block; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    nav.active .menu li {
+      margin: 10px 20px;
+    }
+
+    nav.active .menu a {
+      font-size: 18px;
+    }
   }
-}
 </style>
 
-
 <script>
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+  const links = document.querySelectorAll(".menu li a");
 
-const burger = document.querySelector(".burger");
-const nav = document.querySelector("nav");
-const menu = document.querySelector(".menu");
-const links = document.querySelectorAll(".menu li a");
-
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  nav.classList.toggle("active");
-});
-
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    burger.classList.remove("active");
-    nav.classList.remove("active");
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
   });
-});
 
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      burger.classList.remove("active");
+      nav.classList.remove("active");
+    });
+  });
 </script>
