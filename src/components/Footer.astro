@@ -50,9 +50,9 @@
       <h4>Sociale medier</h4>
       <hr />
       <div id="socials">
-        <img src="../svg/fb_logo.svg" alt="" />
-        <img src="../svg/in_logo.svg" alt="" />
-        <img src="../svg/ig_logo.svg" alt="" />
+        <img src="../svg/fb_logo.svg" alt="facebook logo" />
+        <img src="../svg/in_logo.svg" alt="instagram logo" />
+        <img src="../svg/ig_logo.svg" alt="linked in logo" />
       </div>
     </div>
   </section>
@@ -114,7 +114,10 @@
   #socials {
     display: flex;
     flex-direction: row;
-    row-gap: 10px;
+    column-gap: 10px;
+  }
+  #socials img {
+    width: 10%;
   }
   @media screen and (max-width: 800px) {
     #psyko_logo {
