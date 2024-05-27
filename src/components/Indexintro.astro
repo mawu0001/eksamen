@@ -14,8 +14,10 @@ import Knap from "./Knap.astro";
     <p>
    Som terapeut, der selv er særligt sensitiv, bringer jeg en unik forståelse og empati med til arbejdet med klienter, der oplever angst. Jeg tror på at skabe et rum præget af tryghed og støtte, hvor klienten kan føle sig set og hørt. I vores sessioner udforsker vi sammen de underliggende følelser og tanker, klienten har. Vi identificerer negative tankemønstre og arbejder på at erstatte dem med mere hensigtsmæssige og positive tanker.
     </p>
+    <div id="knapper">
     <Knap title="Læs mere" link="ommig.html" />
-    <Knap title="Book tid" link="priserkontakt.html" />
+    <Knap title="Book tid" link="priserkontakt.html" /> 
+  </div>
   </div>
 </section>
 
@@ -24,7 +26,7 @@ import Knap from "./Knap.astro";
 <style>
   section {
     background-color: var(--pesto300);
-    display: grid;
+    display: grid; 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 10px 100px;
@@ -39,13 +41,42 @@ import Knap from "./Knap.astro";
     grid-row: 1 / span2;
     align-self: center;
   }
+ #knapper{
+margin-top: 25px;
+margin-bottom: 10px;
+    display:flex;
+    gap:30px;
+ 
+  }
+ 
   h3 {
     font-family: var(--secondaryfont);
   }
-  @media (max-width: 450px);{
-    section{
-        display: flex;
-        flex-direction: column;
+    @media (max-width: 800px) {
+    section {
+     padding: 20px 110px;
+       display: flex;
+        flex-direction: column;'
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+    }
+
+    #knapper{
+      display: grid;
+    }
+  }
+  @media (max-width: 450px) {
+    section {
+     padding: 20px 70px;
+       display: flex;
+        flex-direction: column;'
+    }
+    img {
+      width: 300px;
+      height: auto;
     }
   }
 </style>
