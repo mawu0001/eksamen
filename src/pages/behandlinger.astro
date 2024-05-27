@@ -114,10 +114,17 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
     justify-content: space-evenly;
   }
   #kontakt {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin: 100px 220px;
   }
   @media (max-width: 800px) {
     .indhold {
       padding: 0 120px;
+    }
+    #kontakt {
+      margin: 100px 120px;
     }
   }
   @media (max-width: 450px) {
@@ -147,6 +154,9 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
     }
     #arrow img {
       width: 90%;
+    }
+    #kontakt {
+      margin: 100px 70px;
     }
   }
 </style>
