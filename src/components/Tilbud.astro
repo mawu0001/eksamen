@@ -9,7 +9,7 @@ import Knap from "./Knap.astro";
   <article id="text_container">
     <div id="heading">
       <h2>Hvad kan jeg tilbyde dig?</h2>
-      <h3 id="subtitel">-en gratis uforpligtende første samtale</h3>
+      <h3 id="subtitel">En gratis uforpligtende første samtale</h3>
     </div>
     <p>
       Som terapeut kan jeg tilbyde dig en tryg og støttende terapiprocess, hvor
@@ -29,7 +29,7 @@ import Knap from "./Knap.astro";
 
 <style>
   #image_container {
-    height: 700px;
+    height: 600px;
     overflow: hidden;
   }
   img {
@@ -43,7 +43,6 @@ import Knap from "./Knap.astro";
   }
 
   #heading {
-    margin-bottom: 5%;
     text-align: center;
   }
   #text_container {
@@ -54,15 +53,15 @@ import Knap from "./Knap.astro";
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(229, 137, 82, 0.7);
-
     position: absolute;
     padding: 50px;
-    width: 1000px;
-    row-gap: 15px;
+    width: 900px;
+    row-gap: 25px;
   }
   p {
     column-count: 2;
-    column-gap: 20px;
+    column-gap: 40px;
+    max-width: none;
   }
 
   #button_container {
