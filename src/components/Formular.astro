@@ -3,8 +3,9 @@
 ---
 
 <div class="formular">
-    <div><h2>Kontakt</h2></div>
+    <div><h2>Kontakt</h2>
         <h4 class="book">For at booke en tid, kan du <br> sende mig en anmodning her</h4>
+        </div>
         <form>
             <input type="text" name="navn" placeholder="Navn">
             <input type="email" name="email" placeholder="E-mail">
@@ -14,19 +15,19 @@
         </form>
         <div class="contact_info">
             <div class="contact_item">
-                <img src="phone_icon.png" alt="Phone">
+                <img src="/public/svg/telefon.svg" alt="Phone">
                 <span>+45 44 44 44 44</span>
             </div>
             <div class="contact_item">
-                <img src="email_icon.png" alt="Email">
+                <img src="/public/svg/mail.svg" alt="Email">
                 <span>pernille@mail.com</span>
             </div>
             <div class="contact_item">
-                <img src="location_icon.png" alt="Location">
+                <img src="/public/svg/map.svg" alt="Location">
                 <span>Aalborg & København</span>
             </div>
             <div class="contact_item">
-                <img src="pen_icon.png" alt="CVR">
+                <img src="/public/svg/cvr.svg" alt="CVR">
                 <span>CVR- nr: 404444</span>
             </div>
         </div>
@@ -34,7 +35,9 @@
 
  <style>
     h2{
-        text-align: center;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 10px;
     }
 /* formular-------------------------------------------------- */
 .formular{
@@ -42,24 +45,25 @@
     grid-template-columns: 1fr 1fr;
     background-color: var(--pesto300);
     margin-bottom: 15%;
+    align-items: center;
 }
 .book{
     font-weight: normal;
     grid-column: span 2;
     text-align: center;
-    margin-right: 50%;
-    margin-bottom: -4%;
+    margin-bottom: -8%;
 }
 form{
     display: flex;
     flex-direction: column;
     margin: 15%;
+    grid-column: 1;
 }
 input, textarea {
     margin-bottom: 15px;
     padding: 10px;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     background-color: var( --flamepea50);
     font-size: 16px;
     font-family: var(--secondaryfont);
@@ -73,13 +77,13 @@ textarea {
     background-color: var( --flamepea50);
     font-weight: bold;
     cursor: pointer;
-    width: 229px;
-    height: 68px;
+    width: 200px;
+    height: 50px;
     border-radius: 30px;
     border: none;
     color: var(--pesto950);
     font-family: var(--primaryfont);
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -100,15 +104,16 @@ textarea {
 .contact_info {
     background-color: var( --flamepea50);
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 30px;
     text-align: left;
     display: flex;
     flex-direction: column;
-    margin: 20%;
     width: 300px;
     height: 300px;
-    align-content: center;
     gap: 10px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    align-self: center;
 }
 .contact_item {
     display: flex;
@@ -141,7 +146,17 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 26%;
+    margin: 10%;
     }
+    input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: var( --flamepea50);
+    font-size: 16px;
+    font-family: var(--secondaryfont);
+    width: 300px;
+}
 }
  </style>
