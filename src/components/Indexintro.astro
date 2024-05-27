@@ -6,7 +6,7 @@ import Knap from "./Knap.astro";
 
 <section>
   <div id="heading">
-    <h3>Psyokoterapeut</h3>
+    <h3>Psykoterapeut</h3>
     <h1>Pernille Grønhøj</h1>
   </div>
   <img src="../img/portraet6sorthvid.webp" alt="" />
@@ -14,11 +14,12 @@ import Knap from "./Knap.astro";
     <p>
    Som terapeut, der selv er særligt sensitiv, bringer jeg en unik forståelse og empati med til arbejdet med klienter, der oplever angst. Jeg tror på at skabe et rum præget af tryghed og støtte, hvor klienten kan føle sig set og hørt. I vores sessioner udforsker vi sammen de underliggende følelser og tanker, klienten har. Vi identificerer negative tankemønstre og arbejder på at erstatte dem med mere hensigtsmæssige og positive tanker.
     </p>
-    <div id="knapper">
+   </div> 
+   <div id="knapper">
     <Knap title="Læs mere" link="ommig.html" />
     <Knap title="Book tid" link="priserkontakt.html" /> 
   </div>
-  </div>
+  
 </section>
 
 
@@ -27,19 +28,19 @@ import Knap from "./Knap.astro";
   section {
     background-color: var(--pesto300);
     display: grid; 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 10px 100px;
+   grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+    padding: 40px 170px;
+  column-gap: 40px;
   }
   #heading {
     grid-column: 2;
   }
   img {
-    width: 80%;
-    height: auto;
-    grid-column: 1;
-    grid-row: 1 / span2;
-    align-self: center;
+  width: 322px;
+  height: auto;
+  grid-column: 1;
+  grid-row: 1 / span2;
   }
  #knapper{
 margin-top: 25px;
@@ -64,9 +65,9 @@ margin-bottom: 10px;
       height: auto;
     }
 
-    #knapper{
+    /* #knapper{
       display: grid;
-    }
+    } */
   }
   @media (max-width: 450px) {
     section {
