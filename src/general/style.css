@@ -68,6 +68,16 @@ p {
   max-width: 65ch;
 }
 
+ul {
+  color: var(--pesto950);
+  font-family: "Gambarino";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 65ch;
+}
+
 /* Mobil */
 @media (max-width: 800px) {
   /* FontSize/MOBIL&TABLET/H1 */
