@@ -165,10 +165,18 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
 </style>
 
 <script>
-  //Kodet af Chat GPT
+  // Javascript fra Chat GPT
 
   document.addEventListener("DOMContentLoaded", function () {
-    const headerHeight = 137.1; // Header height in pixels
+    const headerHeight = 140; // Header height in pixels
+
+    // Function to handle smooth scrolling
+    function smoothScroll(targetPosition) {
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    }
 
     // Select all links within the .submenu
     const submenuLinks = document.querySelectorAll(".submenu a");
@@ -188,13 +196,20 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
             targetElement.getBoundingClientRect().top + window.pageYOffset;
           const offsetPosition = elementPosition - headerHeight;
 
-          // Scroll to the offset position
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth",
-          });
+          // Scroll to the offset position smoothly
+          smoothScroll(offsetPosition);
         }
       });
+    });
+
+    // Handle smooth scroll for the #arrow link
+    const arrowLink = document.getElementById("arrow");
+    arrowLink.addEventListener("click", function (event) {
+      // Prevent the default link behavior
+      event.preventDefault();
+
+      // Scroll to the top smoothly
+      smoothScroll(0);
     });
   });
 </script>
