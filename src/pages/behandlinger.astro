@@ -66,16 +66,13 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
 </Layout>
 
 <style>
+  /* Essential Styles */
   #arrow {
     position: fixed;
     right: 20px;
     bottom: 20px;
     z-index: 1000;
     cursor: pointer;
-  }
-  h2 {
-    text-align: center;
-    padding-bottom: 40px;
   }
   a {
     color: var(--Pesto950);
@@ -89,19 +86,20 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
     text-decoration: none;
     width: fit-content;
   }
+  a:hover {
+    font-weight: 600;
+  }
+  h2 {
+    text-align: center;
+    padding-bottom: 40px;
+  }
   .indhold {
-    padding: 5% 12%;
     margin-bottom: 70px;
+    padding: 5% 12%;
   }
   .localmenu1 {
     background-color: var(--pesto300);
     padding: 70px 90px;
-  }
-  .submenu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    column-gap: 20px;
   }
   .localmenu2 {
     background-color: var(--flamepea300);
@@ -110,8 +108,8 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
   .submenu {
     display: flex;
     flex-direction: row;
-
     justify-content: space-evenly;
+    column-gap: 20px;
   }
   #kontakt {
     display: grid;
@@ -119,10 +117,9 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
     text-align: center;
     margin: 100px 220px;
   }
+
+  /* Responsive Styles */
   @media (max-width: 800px) {
-    .indhold {
-      /* padding: 0 120px; */
-    }
     #kontakt {
       margin: 100px 120px;
     }
@@ -132,17 +129,8 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
   }
   @media (max-width: 450px) {
     a {
-      color: var(--Pesto950);
-      text-align: center;
-      font-family: "General Sans";
       font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
       margin-bottom: 5px;
-    }
-    .indhold {
-      /* padding: 0 70px; */
     }
     .localmenu1,
     .localmenu2 {
@@ -151,9 +139,6 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
     .submenu {
       display: flex;
       flex-direction: column;
-    }
-    h2 {
-      text-align: left;
     }
     #arrow img {
       width: 90%;
@@ -165,10 +150,10 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
 </style>
 
 <script>
-  // Javascript fra Chat GPT
+  // JavaScript from Chat GPT
 
   document.addEventListener("DOMContentLoaded", function () {
-    const headerHeight = 140; // Header height in pixels
+    const headerHeight = 165; // Header height in pixels
 
     // Function to handle smooth scrolling
     function smoothScroll(targetPosition) {

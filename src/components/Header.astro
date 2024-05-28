@@ -23,22 +23,24 @@
 </header>
 
 <style>
-  .menu a.active {
-    border-bottom: 2px solid var(--flamepea400);
-    padding-bottom: 2px;
-    font-weight: 600;
-    color: var(--flamepea400);
-    width: fit-content;
-  }
-
+  /* Base Styles */
   p {
     color: var(--pesto950);
     font-family: "General Sans";
     font-size: 36px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     text-transform: uppercase;
+  }
+
+  .logo {
+    color: var(--pesto950);
+    font-family: "General Sans";
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .logo a {
+    text-decoration: none;
   }
 
   header {
@@ -52,18 +54,6 @@
     z-index: 1000;
   }
 
-  .logo {
-    color: var(--pesto950);
-    font-family: "General Sans";
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 600;
-  }
-
-  .logo a {
-    text-decoration: none;
-  }
-
   nav {
     display: flex;
     align-items: center;
@@ -74,14 +64,6 @@
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  li a {
-    color: var(--Pesto950);
-    font-family: "General Sans";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
   }
 
   .menu li {
@@ -97,9 +79,10 @@
     padding: 10px;
     color: var(--pesto950);
     text-decoration: none;
-    transition: color 0.3s;
     text-align: end;
     font-size: 1rem;
+    font-weight: 500;
+    font-family: "General Sans";
     transition:
       color 0.3s,
       font-weight 0.3s;
@@ -110,10 +93,18 @@
     font-weight: 600;
   }
 
+  .menu a.active {
+    border-bottom: 2px solid var(--flamepea400);
+    padding-bottom: 0;
+    font-weight: 600;
+    color: var(--flamepea400);
+  }
+
   .burger {
     width: 30px;
     height: 20px;
     cursor: pointer;
+    display: none;
   }
 
   .burger .line {
@@ -123,49 +114,34 @@
     margin-bottom: 5px;
     transition: 0.2s linear;
   }
-  .burger {
-    display: none;
-  }
 
-  /* Mobil */
-
-  @media screen and (max-width: 450px) {
+  /* Media Queries */
+  @media screen and (max-width: 800px) {
     .menu {
       display: none;
       background-color: var(--flamepea50);
     }
+
     .burger {
       display: block;
     }
 
-    .logo {
-      color: var(--pesto950);
-      font-family: "General Sans";
-      font-size: 0.6rem;
-      font-style: normal;
-      font-weight: 600;
-    }
-
     .burger.active .line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
-      transition: 0.2s linear;
     }
 
     .burger.active .line:nth-child(2) {
       opacity: 0;
-      transition: 0.15s linear;
     }
 
     .burger.active .line:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
-      transition: 0.2s linear;
     }
 
     nav.active .menu {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       position: absolute;
       top: 100px;
       left: 0;
@@ -182,73 +158,12 @@
       font-size: 14px;
     }
   }
-
-  /* Tablet */
-
-  @media screen and (max-width: 800px) {
-    .menu {
-      display: none;
-      background-color: var(--flamepea50);
-    }
-    .burger {
-      display: block;
-      /* margin-left: 200px; */
-    }
-
-    .logo {
-      color: var(--pesto950);
-      font-family: "General Sans";
-      font-size: 1.2rem;
-      font-style: normal;
-      font-weight: 600;
-      /* margin-left: -20px; */
-    }
-
-    .burger.active .line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-      transition: 0.2s linear;
-    }
-
-    .burger.active .line:nth-child(2) {
-      opacity: 0;
-      transition: 0.15s linear;
-    }
-
-    .burger.active .line:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-      transition: 0.2s linear;
-    }
-
-    nav.active .menu {
-      /* display: block; */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      position: absolute;
-      top: 100px;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      padding-bottom: 30px;
-      height: 100vh;
-    }
-
-    nav.active .menu li {
-      margin: 10px 20px;
-    }
-
-    nav.active .menu a {
-      font-size: 18px;
-    }
-  }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector("nav");
-    const menu = document.querySelector(".menu");
     const links = document.querySelectorAll(".menu li a");
 
     burger.addEventListener("click", () => {
@@ -262,7 +177,7 @@
         nav.classList.remove("active");
       });
     });
-    // Kode fra Chat GPT
+    //kode fra chat gpt
     // Highlight the current page
     const currentPath = window.location.pathname;
     links.forEach((link) => {

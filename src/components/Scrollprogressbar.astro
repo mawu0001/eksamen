@@ -10,7 +10,7 @@
   .scroll_container {
     position: sticky;
     z-index: 10;
-    top: 122px;
+    top: 145px;
     width: 100%;
     height: 15px;
     background-color: var(--flamepea50);
@@ -32,13 +32,16 @@
   window.addEventListener("scroll", updateIndicator);
 
   function updateIndicator() {
-    const scrolled =
-      document.body.scrollTop || document.documentElement.scrollTop;
+    const scrolled = window.scrollY || window.pageYOffset;
     const height =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
     const scrolledfactor = (scrolled / height) * 100;
-    document.querySelector(".scroll_indicator").style.width =
-      scrolledfactor + "%";
+    const indicatorElement = document.querySelector(
+      ".scroll_indicator"
+    ) as HTMLElement | null;
+    if (indicatorElement) {
+      indicatorElement.style.width = scrolledfactor + "%";
+    }
   }
 </script>
