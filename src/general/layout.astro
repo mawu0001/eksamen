@@ -32,3 +32,16 @@ import Footer from "../components/Footer.astro";
     <Footer />
   </body>
 </html>
+<script>
+  // Get the <title> element
+  const pageTitle = document.querySelector("title");
+
+  // Function to update the title
+  function updateTitle(newTitle) {
+    pageTitle.textContent = newTitle;
+  }
+
+  // Call the function with the desired title for each page
+  // For example, if you want to set the title to "Home" for the home page:
+  updateTitle("Astro - Home");
+</script>
