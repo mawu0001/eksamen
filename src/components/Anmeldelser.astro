@@ -52,10 +52,11 @@
     justify-content: center;
     align-items: center;
     height: auto;
-    width: 900px;
+    /* width: 900px; */
     border-radius: 20px;
     background-color: var(--flamepea300);
     padding: 20px 100px;
+    margin: 5% 12%;
   }
 
   .indhold {
@@ -81,6 +82,21 @@
     font-weight: lighter;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 800px) {
+    .box {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+      /* max-width: 75%; */
+      /* margin: 5% 12%; */
+    }
+
+  }
+
+  
+
+
 
   @media screen and (max-width: 450px) {
     .box {
