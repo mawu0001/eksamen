@@ -5,6 +5,252 @@ import "../general/style.css";
 <Layout>
 
 <section>
+        <div>
+            <h2>Om mig</h2> <br><br>
+            <p>
+                Jeg er psykoterapeut med i alt fire års terapeutisk uddannelse. Min uddannelse har givet mig en dyb forståelse for 
+                menneskelig sensitivitet og empati, og jeg har specialiseret mig i at hjælpe klienter med at håndtere angst og stress. <br><br>  
+                Gennem min professionelle træning har jeg lært at skabe et trygt og  støttende rum, hvor du kan føle dig set og hørt.    
+                Jeg bruger metoder som mindfulness, åndedrætsøvelser og  kognitiv adfærdsterapi for at hjælpe dig med at finde indre ro og 
+                fremme din personlige vækst og trivsel.
+            </p>
+        </div>
+        <img src="../img/ommigpernille1.webp" alt="Pernille" id="pom"/>
+    </section>
+
+    <div class="uddannelse-container">
+        <h2>Uddannelse</h2> <br><br>
+        <div class="columns">
+            <p>
+                Mit navn er Pernille, og jeg er en autoriseret psykoterapeut, uddannet fra EFT Instituttet i København.
+                Jeg har altid haft en passion for at arbejde med mennesker, og denne passion har præget hele mit arbejdsliv.
+                At uddanne mig til psykoterapeut har været den bedste beslutning, jeg har taget, da min egen særlige
+            </p>
+            <p>
+              
+                sensitivitet giver mig en unik evne til at forstå og støtte mine klienter. Jeg brænder for at skabe et trygt og
+                empatisk rum, hvor vi sammen kan udforske dine udfordringer og fremme din personlige vækst og trivsel. Mit mål er at hjælpe mennesker med at finde deres indre styrke og opnå følelsesmæssig frihed.
+            </p>
+        </div>
+    </div>
+
+
+<div class="list-container">
+    <div class="list">
+        <h3>Erfaring</h3> <br><br>
+        <ul>
+            <li>2019-2024: Psykoterapeutuddannelsen ved EFT -institutet  i København</li>
+            <hr>
+            <li>2015: Essens’ Grundkursus til psykoterapeutuddannelsen</li>
+            <hr>
+            <li>2013-2014: Kursus; Lær psykopterapeutiske værktøjer ved Ilse Strand </li>
+            <hr>
+            <li>2011: University of Gävle: Developmental Psykology</li>
+            <hr>
+            <li>1999: Ophold i Australien; Kursus: indtroduction to Psykology </li>
+            <hr>
+        </ul>
+    </div>
+    </div>
+
+    <div class="havet">
+        <img src="../img/sti_fynshoved.webp" alt="Havet"/>
+    </div>
+
+
+ <style>
+        section:first-of-type {
+            background-color: var(--pesto300);
+            margin-bottom: 30px;
+            padding: 40px 170px;
+            column-gap: 40px;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 40px;
+            padding: 10px 100px;
+        }
+
+        .uddannelse-container {
+            padding: 10px 100px;
+            margin-bottom: 30px;
+            padding: 40px 170px;
+            column-gap: 40px;
+        }
+
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .columns p {
+            flex: 1;
+            margin: 0;
+        }
+
+        img {
+            width: 80%; 
+            height: auto;
+            align-self: center;
+            width: 322px;
+            height: auto; 
+        }
+
+        #pom {
+            grid-row: 1 / span 2;
+            grid-column: 2;
+            border-radius: 20px;
+        }
+
+        .list-container, h3 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .list {
+            /* grid-template-columns: 1fr auto;  */
+            background-color: var(--flamepea300);
+            padding: 40px 40px;
+            margin-bottom: 100px;
+            width: 50%;
+            border-radius: 20px;
+            
+        }
+
+        ul {
+            background-color: var(--flamepea300);
+            list-style: none;
+            justify-content: center;
+            padding: 0;
+            display: grid;
+            column-gap: 40px;
+           
+        }
+
+        .havet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .havet img {
+            width: 70%;
+            height: 450px;
+            border-radius: 10px;
+            margin-bottom: 100px;
+        }
+
+        hr {
+            color: var(--pesto950);
+            margin-bottom: 40px;
+            margin-right: 20px;
+        }
+
+        /* Tablet 1080px */
+        /* Tablet 800px */
+        @media (max-width: 800px) {
+            section:first-of-type {
+                display: flex;
+                flex-direction: column; 
+                padding: 40px 20px; 
+                align-items: center;
+            }
+
+            .uddannelse-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                padding: 40px 20px; 
+            }
+
+            .list-container{
+                display:flex;
+            }
+
+            .list {
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                padding: 40px 20px; 
+                margin-bottom: 100px;
+            }
+
+            .columns{
+                flex-direction:column;
+            }
+
+
+            ul {
+                width: 100%;
+            }
+
+            .havet img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Mobil 450px */
+        @media (max-width: 450px) {
+            section {
+                display: flex;
+                flex-direction: column; 
+                padding: 10px; 
+            }
+
+            .havet img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section>
   <div>
     <h2>Om mig</h2> <br><br>
     <p>
@@ -169,13 +415,6 @@ hr{
     width: 100%;
   }
 
-#psykologo {
-    display:flex;
-    width: 160px;
-    height: 215px;
-    flex-shrink: 0;
-}
-
 .havet img {
     width: 100%;
     height: auto;
@@ -198,4 +437,4 @@ hr{
 }
 }
 
-</style>
+</style> -->
