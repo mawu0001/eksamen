@@ -1,6 +1,7 @@
 ---
 import Layout from "../general/layout.astro";
 import "../general/style.css";
+import Knap from "../components/Knap.astro";
 ---
 <Layout>
 
@@ -56,6 +57,13 @@ import "../general/style.css";
     <div class="havet">
         <img src="../img/sti_fynshoved.webp" alt="Havet"/>
     </div>
+    <div id="kontakt">
+    <p>
+      Hvis du føler, mine tilbud kan hjælpe dig, så tøv ikke med at booke en
+      tid! 
+    </p>
+    <Knap title="Book tid" link="/priserkontakt.html" />
+</div>
 
 
  <style>
@@ -132,37 +140,44 @@ import "../general/style.css";
            
         }
 
-        .havet {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
+.havet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 
-        .havet img {
-            width: 70%;
-            height: 450px;
-            border-radius: 10px;
-            margin-bottom: 100px;
-        }
+.havet img {
+    width: 70%;
+    height: 450px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
 
-        hr {
-            color: var(--pesto950);
-            margin-bottom: 40px;
-        }
+hr {
+    color: var(--pesto950);
+    margin-bottom: 40px;
+}
 
-        /* Tablet 1080px */
-        /* Tablet 800px */
-        @media (max-width: 800px) {
-            section:first-of-type {
-                display: flex;
-                flex-direction: column; 
-                /* padding: 40px 20px;  */
-                /* align-items: center; */
-            }
+#kontakt {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin: 100px 220px;
+  }
 
-            .uddannelse-container {
+/* Tablet 1080px */
+/* Tablet 800px */
+@media (max-width: 800px) {
+    section:first-of-type {
+    display: flex;
+    flex-direction: column; 
+    /* padding: 40px 20px;  */
+    /* align-items: center; */
+    }
+
+    .uddannelse-container {
                 display: flex;
                 flex-direction: column;
                 /* align-items: center;  */
@@ -194,21 +209,30 @@ import "../general/style.css";
                 width: 100%;
                 height: auto;
             }
-        }
 
-        /* Mobil 450px */
-        @media (max-width: 450px) {
-            section {
-                display: flex;
-                flex-direction: column; 
-                /* padding: 10px;  */
-            }
+    #kontakt {
+      margin: 100px 120px;
+    }
+}
 
-            .havet img {
-                width: 100%;
-                height: auto;
-            }
-        }
+/* Mobil 450px */
+@media (max-width: 450px) {
+    section {
+    display: flex;
+    flex-direction: column; 
+    /* padding: 10px;  */
+    }
+
+    .havet img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    }
+    #kontakt {
+      margin: 100px 70px;
+    }
+
+}
     </style>
 
     
