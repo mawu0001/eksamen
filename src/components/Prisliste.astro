@@ -46,27 +46,22 @@
     position: relative;
     top: -50px; /* Adjust this value to move it closer to the circle */
   }
-
   .pris {
     grid-column: 2;
     text-align: right;
     font-family: "General Sans";
   }
-
   .p_titel {
     grid-column: 1;
   }
-
   .tid {
     grid-column: 1;
     font-family: "General Sans";
   }
-
   hr {
     grid-column: 1 / span 2;
     color: var(--pesto950);
   }
-
   .priser {
     text-align: center;
     background-color: #eeb283;
@@ -76,14 +71,12 @@
     margin-top: 70px;
     padding-top: 20px;
   }
-
   .cirkel {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 2%;
   }
-
   .boks {
     background-color: #eeb283;
     display: flex;
@@ -96,7 +89,6 @@
     padding: 1.1%;
     margin-bottom: 100px;
   }
-
   .gebyr {
     text-align: center;
   }
@@ -114,12 +106,10 @@
       margin-bottom: 5%;
       padding: 1.1%;
     }
-
     .gebyr {
       text-align: center;
       padding: 2%;
     }
-
     .priser {
       text-align: center;
       background-color: #eeb283;
@@ -128,11 +118,21 @@
       padding-top: 20px;
       height: 70px;
     }
-
     .priser_tabel {
       margin-left: 10%;
       margin-right: 10%;
       top: -25px; /* Adjust this value as needed for smaller screens */
+    }
+    .cirkel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -12%;
+    }
+  }
+  @media (max-width: 800px) {
+    .cirkel {
+    margin-top: -5%;
     }
   }
 </style>
