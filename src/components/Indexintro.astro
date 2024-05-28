@@ -54,13 +54,20 @@ import Knap from "./Knap.astro";
   }
   @media (max-width: 800px) {
     section {
-      /* padding: 20px 120px; */
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: auto auto auto; 
+      padding: 20px; 
+      column-gap: 20px; 
+
+      /* Hvis vi skal ændre tilbage så stod dette nedanfor under denne section */
+      /* padding: 20px 120px; 
       display: flex;
-      flex-direction: column;
+      flex-direction: column; */
     }
 
     img {
-      width: 200px;
+      width: 300px;
       height: auto;
     }
 
@@ -68,11 +75,12 @@ import Knap from "./Knap.astro";
       display: grid;
     } */
   }
+
   @media (max-width: 450px) {
     section {
-      /* padding: 20px 70px; */
-      /* display: flex;
-      flex-direction: column; */
+      display: flex;
+      flex-direction: column;
+      padding: 20px 70px;
     }
     img {
       width: 300px;
