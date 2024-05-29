@@ -72,10 +72,7 @@
   li a {
     color: var(--Pesto950);
     font-family: "General Sans";
-    font-size: 24px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
   }
   .menu li {
     margin-right: 20px;
@@ -231,7 +228,7 @@
     });
     // Kode fra Chat GPT
     // Highlight the current page
-    const currentPath = window.location.pathname;
+    const currentPath = window.location.pathname + window.location.search;
     links.forEach((link) => {
       if (link.getAttribute("href") === currentPath) {
         link.classList.add("active");
