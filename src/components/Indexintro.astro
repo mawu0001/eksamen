@@ -19,8 +19,8 @@ import Knap from "./Knap.astro";
     </p>
   </div>
   <div id="knapper">
-    <Knap title="Læs mere" link="ommig.html" />
-    <Knap title="Book tid" link="priserkontakt.html" />
+    <Knap title="Læs mere" link="/ommig.html" />
+    <Knap title="Book tid" link="/priserkontakt.html" />
   </div>
 </section>
 
@@ -54,11 +54,11 @@ import Knap from "./Knap.astro";
   }
   @media (max-width: 800px) {
     section {
-      display: grid; 
-      grid-template-columns: 1fr 1fr; 
-      grid-template-rows: auto auto auto; 
-      padding: 20px; 
-      column-gap: 20px; 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      padding: 20px;
+      column-gap: 20px;
 
       /* Hvis vi skal ændre tilbage så stod dette nedanfor under denne section */
       /* padding: 20px 120px; 
