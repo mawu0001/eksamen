@@ -2,9 +2,7 @@
 const { title, link } = Astro.props;
 ---
 
-<button class="button link-button" id="Buttonjs" data-link={link}>
-  {title}</button
->
+<button class="button link-button" data-link={link}> {title}</button>
 
 <style>
   .button {
