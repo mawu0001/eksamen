@@ -27,7 +27,6 @@ import Knap from "../components/Knap.astro";
       loading="lazy"
     />
   </section>
-
   <div class="uddannelse-container">
     <h2>Uddannelse</h2>
     <br /><br />
@@ -48,7 +47,6 @@ import Knap from "../components/Knap.astro";
       </p>
     </div>
   </div>
-
   <div class="list-container">
     <div class="list">
       <h3>Erfaring</h3>
@@ -57,21 +55,15 @@ import Knap from "../components/Knap.astro";
         <li>
           2019-2024: Psykoterapeutuddannelsen ved EFT -institutet i København
         </li>
-        <!-- <hr> -->
         <li>2015: Essens’ Grundkursus til psykoterapeutuddannelsen</li>
-        <!-- <hr> -->
         <li>
           2013-2014: Kursus; Lær psykopterapeutiske værktøjer ved Ilse Strand
         </li>
-        <!-- <hr> -->
         <li>2011: University of Gävle: Developmental Psykology</li>
-        <!-- <hr> -->
         <li>1999: Ophold i Australien; Kursus: indtroduction to Psykology</li>
-        <!-- <hr> -->
       </ul>
     </div>
   </div>
-
   <div class="havet">
     <img src="../img/sti_fynshoved.webp" alt="Havet" loading="lazy" />
   </div>
@@ -82,365 +74,127 @@ import Knap from "../components/Knap.astro";
     </p>
     <Knap title="Book tid" link="/priserkontakt.html" />
   </div>
-
-  <style>
-    section:first-of-type {
-      background-color: var(--pesto300);
-      margin-bottom: 30px;
-      /* padding: 40px 170px; */
-      padding: 5% 12%;
-      column-gap: 40px;
-    }
-
-    section {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      gap: 40px;
-      /* padding: 10px 100px; */
-    }
-
-    .uddannelse-container {
-      /* padding: 10px 100px; */
-      margin-bottom: 30px;
-      /* padding: 40px 170px; */
-      padding: 5% 12%;
-      column-gap: 40px;
-    }
-
-    .columns {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .columns p {
-      flex: 1;
-      margin: 0;
-    }
-
-    img {
-      width: 80%;
-      height: auto;
-      align-self: center;
-      width: 322px;
-      height: auto;
-    }
-
-    #pom {
-      grid-row: 1 / span 2;
-      grid-column: 2;
-      border-radius: 20px;
-    }
-
-    .list-container,
-    h3 {
-      display: flex;
-      justify-content: center;
-    }
-
-    .list {
-      /* grid-template-columns: 1fr auto;  */
-      background-color: var(--flamepea300);
-      padding: 40px 40px;
-      margin-bottom: 100px;
-      width: 50%;
-      border-radius: 30px;
-    }
-
-    ul {
-      background-color: var(--flamepea300);
-      list-style: none;
-      justify-content: center;
-      padding: 0;
-      display: grid;
-      column-gap: 40px;
-    }
-    li {
-      border-bottom: 2px solid var(--pesto950);
-      padding-bottom: 2%;
-      padding-top: 6%;
-    }
-
-    .havet {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
-
-    .havet img {
-      aspect-ratio: 1.78;
-      width: 70%;
-      /* height: 450px; */
-      border-radius: 30px;
-      margin-bottom: 30px;
-    }
-
-    hr {
-      color: var(--pesto950);
-      margin-bottom: 40px;
-    }
-
-    #kontakt {
-      display: grid;
-      place-items: center;
-      text-align: center;
-      margin: 100px 220px;
-    }
-
-    /* Tablet 1080px */
-    /* Tablet 800px */
-    @media (max-width: 800px) {
-      section:first-of-type {
-        display: flex;
-        flex-direction: column;
-        /* padding: 40px 20px;  */
-        /* align-items: center; */
-      }
-
-      .uddannelse-container {
-        display: flex;
-        flex-direction: column;
-        /* align-items: center;  */
-        /* padding: 40px 20px;  */
-      }
-
-      .list-container {
-        display: flex;
-      }
-
-      .list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* padding: 40px 20px;  */
-        margin-bottom: 100px;
-      }
-
-      .columns {
-        flex-direction: column;
-      }
-
-      ul {
-        width: 100%;
-      }
-
-      .havet img {
-        width: 80%;
-        /* height: auto; */
-      }
-
-      #kontakt {
-        margin: 100px 120px;
-      }
-    }
-
-    /* Mobil 450px */
-    @media (max-width: 450px) {
-      section {
-        display: flex;
-        flex-direction: column;
-        /* padding: 10px;  */
-      }
-
-      /* .havet img {
-        width: 100%;
-        height: auto;
-        border-radius: 0px;
-      } */
-      #kontakt {
-        margin: 100px 70px;
-      }
-    }
-  </style>
-
-  <!-- <section>
-  <div>
-    <h2>Om mig</h2> <br><br>
-    <p>
-      Jeg er psykoterapeut med i alt fire års terapeutisk uddannelse. Min uddannelse har givet mig en dyb forståelse for 
-      menneskelig sensitivitet og empati, og jeg har specialiseret mig i at hjælpe klienter med at håndtere angst og stress. <br><br>  
-      Gennem min professionelle træning har jeg lært at skabe et trygt og  støttende rum, hvor du kan føle dig set og hørt.    
-      Jeg bruger metoder som mindfulness, åndedrætsøvelser og  kognitiv adfærdsterapi for at hjælpe dig med at finde indre ro og 
-      fremme din personlige vækst og trivsel.
-    </p>
-  </div>
-   <img src="../img/ommigpernille1.webp" alt="Pernille" id="pom"/>
-</section>
-
-<div class= "uddannelse-container">
-    <h2>Uddannelse</h2>
-    <p>Mit navn er Pernille, og jeg er en autoriseret psykoterapeut, uddannet fra EFT Instituttet i København. <br><br>
-     Jeg har altid haft en passion for at arbejde med mennesker, og denne  passion har præget hele mit arbejdsliv. At uddanne 
-     mig til psykoterapeut har været den bedste beslutning, jeg nogensinde har taget, da min egen særlige sensitivitet giver 
-     mig en unik evne til at forstå og støtte mine klienter. Jeg brænder  for at skabe et trygt og empatisk rum, hvor vi 
-     sammen kan udforske dine udfordringer og fremme din personlige vækst og trivsel.</p>
-  </div>
-  <div class="list">
-    <ul>
-      <li>2019-2024: Psykoterapeutuddannelsen ved EFT -institutet  i København</li>
-      <hr>
-      <li>2015: Essens’ Grundkursus til psykoterapeutuddannelsen</li>
-      <hr>
-      <li>2013-2014: Kursus; Lær psylpterapeutiske værktøjer ved Ilse Strand </li>
-      <hr>
-      <li>2011: University of Gävle: Developmental Psykology</li>
-      <hr>
-      <li>1999: Ophold i Australien; Kursus: indtroduction to Psykology </li>
-      <hr>
-    </ul>
-    <img src="../img/psykoterapeut_logo.svg" alt="logo" id="psykologo" width="100"/>
-  </div>
-
-<div class="havet">
-    <img src="../img/sti_fynshoved.webp" alt="Havet"/>
-</div>
-
-
-
-
+</Layout>
 <style>
-
-section:first-of-type {
-  background-color: var(--pesto300);
-  margin-bottom: 30px;
-  padding: 40px 170px;
-  column-gap: 40px;
-}
-
-section {
-  display: grid;
-  grid-template-columns: repeat (2,auto);
-  gap: 40px;
-  padding: 10px 100px;
-}
-
-.uddannelse-container {
-  display: grid;
-  grid-template-columns: repeat (2,auto);
-  gap: 40px;
-  padding: 10px 100px;
-  margin-bottom: 30px;
-  padding: 40px 170px;
-  column-gap: 40px;
-}
-
-img {
-  width: 80%; 
-  height: auto;
-  align-self: center;
-  width: 322px;
-  height: auto; 
-}
-
-#pom {
-    grid-row: 1 / span2;
+  section:first-of-type {
+    background-color: var(--pesto300);
+    margin-bottom: 30px;
+    padding: 5% 12%;
+    column-gap: 40px;
+  }
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 40px;
+  }
+  .uddannelse-container {
+    margin-bottom: 30px;
+    padding: 5% 12%;
+    column-gap: 40px;
+  }
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .columns p {
+    flex: 1;
+    margin: 0;
+  }
+  img {
+    width: 80%;
+    height: auto;
+    align-self: center;
+    width: 322px;
+    height: auto;
+  }
+  #pom {
+    grid-row: 1 / span 2;
     grid-column: 2;
     border-radius: 20px;
-}
-
-.list {
-  display: grid;
-  grid-template-columns: 1fr auto; 
-  align-items: start; 
-  background-color: var(--flamepea300);
-  padding: 40px 170px;
-  column-gap: 40px;
-  margin-bottom: 100px;
-}
-
-ul {
-  background-color: var(--flamepea300);
-  list-style: none;
-  padding: 0;
-  display: grid;
-  column-gap: 40px;
-}
-
-#psykologo {
-    width: 160px;
-    height: 215px;
-    flex-shrink: 0;
-}
-
-.havet{
+  }
+  .list-container,
+  h3 {
+    display: flex;
+    justify-content: center;
+  }
+  .list {
+    background-color: var(--flamepea300);
+    padding: 40px 40px;
+    margin-bottom: 100px;
+    width: 50%;
+    border-radius: 30px;
+  }
+  ul {
+    background-color: var(--flamepea300);
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    display: grid;
+    column-gap: 40px;
+  }
+  li {
+    border-bottom: 2px solid var(--pesto950);
+    padding-bottom: 2%;
+    padding-top: 6%;
+  }
+  .havet {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
     margin-bottom: 40px;
-}
-
-.havet img {
-    width: 50%;
-    height: 300px;
-    border-radius: 10px;
-    margin-bottom: 100px;
-}
-
-hr{
-    color: var(--pesto950);
-    margin-bottom: 40px;
-    margin-right: 20px;
-}
-
-
-/* Tablet 1080px */
-
-/* Tablet 800px */
-
-@media (max-width: 800px) {
-
-  section:first-of-type {
-    display: flex;
-    flex-direction: column; 
-    /* padding: 10px;  */
-    padding: 40px 20px; 
-    align-items: center;
   }
-
-.uddannelse-container{
-    display: flex;
-    flex-direction: column;
-    /* OBS teksten - uddannelse skal ikke være centreret!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-    align-items: center; 
-    padding: 40px 20px; 
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    padding: 40px 20px; 
-    margin-bottom: 100px;
-  }
-
-  ul {
-    width: 100%;
-  }
-
-.havet img {
-    width: 100%;
-    height: auto;
-}
-
-}
-
-/* Mobil 450px */
-
-@media (max-width: 450px) {
-  section {
-    display: flex;
-    flex-direction: column; 
-    padding: 10px; 
-  }
-
   .havet img {
-    width: 100%;
-    height: auto;
-}
-}
-
-</style> --></Layout
->
+    aspect-ratio: 1.78;
+    width: 70%;
+    border-radius: 30px;
+    margin-bottom: 30px;
+  }
+  #kontakt {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin: 100px 220px;
+  }
+  @media (max-width: 800px) {
+    section:first-of-type {
+      display: flex;
+      flex-direction: column;
+    }
+    .uddannelse-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .list-container {
+      display: flex;
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+    .columns {
+      flex-direction: column;
+    }
+    ul {
+      width: 100%;
+    }
+    .havet img {
+      width: 80%;
+    }
+    #kontakt {
+      margin: 100px 120px;
+    }
+  }
+  @media (max-width: 450px) {
+    section {
+      display: flex;
+      flex-direction: column;
+    }
+    #kontakt {
+      margin: 100px 70px;
+    }
+  }
+</style>
