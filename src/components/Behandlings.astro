@@ -4,9 +4,7 @@ const { indhold } = Astro.props;
 
 <article id={indhold.slug}>
   <h3>{indhold.title}</h3>
-  <p>
-    {indhold.text}
-  </p>
+  <p>{indhold.text}</p>
 </article>
 
 <style>
@@ -14,9 +12,9 @@ const { indhold } = Astro.props;
     margin-top: 50px;
   }
   h3 {
-    text-transform: capitalize;
-    padding-bottom: 15px;
     font-size: 24px;
+    padding-bottom: 15px;
+    text-transform: capitalize;
   }
   p {
     column-count: 2;
@@ -28,9 +26,4 @@ const { indhold } = Astro.props;
       column-count: 1;
     }
   }
-  /* @media (max-width: 800px) {
-    p {
-      column-count: 1;
-    }
-  } */
 </style>
