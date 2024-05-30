@@ -202,7 +202,6 @@
     }
   }
 </style>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const burger = document.querySelector(".burger");
@@ -221,12 +220,14 @@
         nav.classList.remove("active");
       });
     });
-    // Kode fra Chat GPT
+    // kode fra chat gpt
     // Highlight the current page
-    const currentPath = window.location.pathname + window.location.search;
+    const currentPath = window.location.pathname;
     links.forEach((link) => {
-      if (link.getAttribute("href") === currentPath) {
-        link.classList.add("active");
+      const anchor = link as HTMLAnchorElement;
+      const linkPath = new URL(anchor.href).pathname; // Få kun pathname fra link href
+      if (linkPath === currentPath) {
+        anchor.classList.add("active");
       }
     });
   });
