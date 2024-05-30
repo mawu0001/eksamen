@@ -104,7 +104,7 @@
     row-gap: 15px;
   }
   #psyko_logo {
-    width: 40%;
+    width: 130px;
     height: auto;
   }
   article {
@@ -118,22 +118,33 @@
     column-gap: 10px;
   }
   #socials img {
-    width: 10%;
+    width: 40px;
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
+    h4 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+    }
+    #socials img {
+      width: 30px;
+    }
     #psyko_logo {
-      width: 60%;
+      width: 110px;
       height: auto;
     }
+  }
+  @media screen and (max-width: 800px) {
     hr {
       width: 100%;
     }
-  }
-  @media screen and (max-width: 450px) {
     footer {
       display: flex;
       flex-direction: column;
     }
+  }
+  @media screen and (max-width: 450px) {
     #container1,
     #container2,
     #container3 {
