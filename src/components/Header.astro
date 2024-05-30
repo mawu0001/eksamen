@@ -85,14 +85,13 @@
       color 0.3s,
       font-weight 0.3s;
   }
-  /* ikke i brug
   .menu a.active {
     border-bottom: 2px solid var(--flamepea400);
     padding-bottom: 2px;
     font-weight: 600;
     color: var(--flamepea400);
     width: fit-content;
-  } */
+  }
   .menu a:hover {
     color: var(--flamepea400);
     font-weight: 600;
@@ -224,13 +223,13 @@
     });
     // kode fra chat gpt
     // virker ikke
-    // const currentPath = window.location.pathname;
-    // links.forEach((link) => {
-    //   const anchor = link as HTMLAnchorElement;
-    //   const linkPath = new URL(anchor.href).pathname;
-    //   if (linkPath === currentPath) {
-    //     anchor.classList.add("active");
-    //   }
-    // });
+    const currentPath = window.location.pathname;
+    links.forEach((link) => {
+      const anchor = link as HTMLAnchorElement;
+      const linkPath = new URL(anchor.href).pathname;
+      if (linkPath === currentPath) {
+        anchor.classList.add("active");
+      }
+    });
   });
 </script>
