@@ -2,7 +2,9 @@
 const { title, link } = Astro.props;
 ---
 
-<button class="button link-button" id="Buttonjs" data-link={link}> {title}</button>
+<button class="button link-button" id="Buttonjs" data-link={link}>
+  {title}</button
+>
 
 <style>
   .button {
@@ -35,6 +37,7 @@ const { title, link } = Astro.props;
     }
   }
 </style>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".link-button");

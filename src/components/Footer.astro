@@ -36,23 +36,27 @@
       <h4>ÅBNINGSTIDER</h4>
       <hr />
       <article>
-        <p><span>Ulige uger</span></p>
-        <p><span>Mandag-fredag:</span> 09.00-19.00</p>
-        <p><span>Lige uger</span></p>
-        <p><span>Mandag-fredag:</span> 09.00-19.00</p>
+        <div class="tider">
+          <p><span>Ulige uger</span></p>
+          <p><span>Mandag-fredag:</span> 09.00-19.00</p>
+        </div>
+        <div class="tider">
+          <p><span>Lige uger</span></p>
+          <p><span>Mandag-fredag:</span> 09.00-19.00</p>
+        </div>
       </article>
     </div>
     <div id="container3_2_2">
-      <p>PERNILLE GRØNHØJ</p>
+      <h4>Sociale medier</h4>
+      <hr />
       <div id="socials">
-        <img src="../svg/fb_logo.svg" alt="" />
-        <img src="../svg/in_logo.svg" alt="" />
-        <img src="../svg/ig_logo.svg" alt="" />
+        <img src="../svg/fb_logo.svg" alt="facebook logo" />
+        <img src="../svg/in_logo.svg" alt="instagram logo" />
+        <img src="../svg/ig_logo.svg" alt="linked in logo" />
       </div>
     </div>
   </section>
 </footer>
-
 <style>
   p {
     font-family: var(--primaryfont);
@@ -66,9 +70,11 @@
     text-transform: uppercase;
   }
   hr {
-    color: var(--pesto950);
-    text-align: left;
-    margin-right: 110px;
+    background-color: var(--pesto950);
+    height: 2px;
+    width: 70%;
+    border: none;
+    margin: 1.5% 0;
   }
   footer {
     background-color: var(--flamepea400);
@@ -85,20 +91,20 @@
     align-content: stretch;
     justify-content: space-between;
   }
-  #container1_1_2,
-  #container3_2_2 {
+  #container1_1_2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 15px;
   }
   #container3_2_2 {
-    align-items: start;
+  }
+  #container3_2_1 article {
+    row-gap: 15px;
   }
   #psyko_logo {
-    width: 160px;
-    height: 215px;
-    flex-shrink: 0;
+    width: 40%;
+    height: auto;
   }
   article {
     display: flex;
@@ -108,12 +114,18 @@
   #socials {
     display: flex;
     flex-direction: row;
-    row-gap: 10px;
+    column-gap: 10px;
+  }
+  #socials img {
+    width: 10%;
   }
   @media screen and (max-width: 800px) {
-    #psykologo {
-      width: 120px;
+    #psyko_logo {
+      width: 60%;
       height: auto;
+    }
+    hr {
+      width: 100%;
     }
   }
   @media screen and (max-width: 450px) {
@@ -121,7 +133,10 @@
       display: flex;
       flex-direction: column;
     }
-    #container1 {
+    #container1,
+    #container2,
+    #container3 {
+      row-gap: 20px;
     }
   }
 </style>

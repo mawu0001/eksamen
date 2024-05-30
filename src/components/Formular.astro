@@ -3,9 +3,13 @@
 ---
 
 <div class="formular">
-  <div><h2>Kontakt</h2></div>
-  <h4 class="book">For at booke en tid, kan du <br /> sende mig en anmodning her</h4>
-  <form>
+  <div>
+    <h2>Kontakt</h2>
+    <h4 class="book">
+      For at booke en tid, kan du <br /> sende mig en anmodning her
+    </h4>
+  </div>
+  <form name="contact" netlify>
     <input type="text" name="navn" placeholder="Navn" />
     <input type="email" name="email" placeholder="E-mail" />
     <input type="text" name="emne" placeholder="Emne" />
@@ -14,19 +18,19 @@
   </form>
   <div class="contact_info">
     <div class="contact_item">
-      <img src="phone_icon.png" alt="Phone" />
+      <img src="/public/svg/telefon.svg" alt="Phone" />
       <span>+45 44 44 44 44</span>
     </div>
     <div class="contact_item">
-      <img src="email_icon.png" alt="Email" />
+      <img src="/public/svg/mail.svg" alt="Email" />
       <span>pernille@mail.com</span>
     </div>
     <div class="contact_item">
-      <img src="location_icon.png" alt="Location" />
+      <img src="/public/svg/map.svg" alt="Location" />
       <span>Aalborg & København</span>
     </div>
     <div class="contact_item">
-      <img src="pen_icon.png" alt="CVR" />
+      <img src="/public/svg/cvr.svg" alt="CVR" />
       <span>CVR- nr: 404444</span>
     </div>
   </div>
@@ -34,7 +38,7 @@
 
 <style>
   h2 {
-    text-align: center;
+    padding-bottom: 10px;
   }
   /* formular-------------------------------------------------- */
   .formular {
@@ -42,6 +46,8 @@
     grid-template-columns: 1fr 1fr;
     background-color: var(--pesto300);
     margin-bottom: 15%;
+    padding: 3.5% 15%;
+    column-gap: 20px;
   }
   .book {
     font-weight: normal;
@@ -53,17 +59,19 @@
   form {
     display: flex;
     flex-direction: column;
-    margin: 15%;
+    grid-column: 1;
+    margin-top: 20px;
   }
   input,
   textarea {
     margin-bottom: 15px;
     padding: 10px;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     background-color: var(--flamepea50);
     font-size: 16px;
     font-family: var(--secondaryfont);
+    width: 85%;
   }
   textarea {
     resize: none;
@@ -74,13 +82,13 @@
     background-color: var(--flamepea50);
     font-weight: bold;
     cursor: pointer;
-    width: 229px;
-    height: 68px;
+    width: 200px;
+    height: 50px;
     border-radius: 30px;
     border: none;
     color: var(--pesto950);
     font-family: var(--primaryfont);
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -88,8 +96,7 @@
     transition:
       transform 0.3s,
       background-color 0.3s;
-    align-self: center;
-    margin-bottom: -10%;
+    align-self: start;
   }
   .send_kontakt:hover {
     background-color: var(--cornflowerblue800);
@@ -100,23 +107,23 @@
   /* kontaktboks---------------------------------------------- */
   .contact_info {
     background-color: var(--flamepea50);
-    padding: 20px;
-    border-radius: 15px;
+    padding: 10px;
+    border-radius: 30px;
     text-align: left;
     display: flex;
     flex-direction: column;
-    margin: 20%;
-    width: 300px;
-    height: 300px;
-    align-content: center;
+    width: 60%;
+    aspect-ratio: 1/1;
     gap: 10px;
+    justify-content: space-evenly;
+    justify-self: right;
   }
   .contact_item {
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-left: 16px;
   }
-
   .contact_item img {
     width: 30px;
     height: 30px;
@@ -127,6 +134,31 @@
   .contact_item span {
     font-size: 16px;
   }
+  @media (max-width: 800px) {
+    .formular {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact_info {
+      width: 45%;
+      align-self: center;
+    }
+    input,
+    textarea {
+      width: 75%;
+      align-self: center;
+    }
+    h2,
+    h4 {
+      text-align: center;
+    }
+    form {
+      margin-bottom: 50px;
+    }
+    .send_kontakt {
+      align-self: center;
+    }
+  }
   /* Mobil */
   @media (max-width: 450px) {
     .formular {
@@ -134,16 +166,16 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 20%;
+      /* padding: 30px 70px; */
     }
     .contact_info {
       background-color: var(--flamepea50);
-      padding: 20px;
-      border-radius: 15px;
+      padding: 10px;
       text-align: left;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin: 26%;
+      width: 70%;
     }
   }
 </style>

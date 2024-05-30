@@ -18,19 +18,19 @@ const Type = data.filter((behandling) => behandling.kategori == "area");
 const Area = data.filter((behandling) => behandling.kategori == "type");
 ---
 
-<Layout>
+<Layout Fanetitel="Behandlinger">
   <Scrollprogressbar />
+  <a id="arrow" href="#"><img src="/svg/arrowup.svg" alt="pil op" /></a>
   <section>
     <div class="localmenu1">
       <h2>Behandlingsområder</h2>
       <article class="submenu">
-        <a href="#angst">Angst</a>
-        <a href="#stress">Stress</a>
-        <a href="#s_sensitiv">Særligt Sensitiv</a>
         <a href="#spiseforstyrrelse">Spiseforstyrrelse</a>
+        <a href="#stress">Stress</a>
+        <a href="#angst">Angst</a>
+        <a href="#s_sensitiv">Særligt Sensitiv</a>
       </article>
     </div>
-    <a id="arrow" href="#"><img src="/svg/arrowup.svg" alt="pil op" /></a>
     <article class="indhold">
       {
         Type.map((data) => {
@@ -43,9 +43,9 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
     <div class="localmenu2">
       <h2>Behandlingstyper</h2>
       <article class="submenu">
-        <a href="#online">Online</a>
         <a href="#walk_&_talk">Walk & Talk</a>
         <a href="#samtale">Samtale</a>
+        <a href="#online">Online</a>
       </article>
     </div>
     <article class="indhold">
@@ -61,16 +61,16 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
       Hvis du føler, mine tilbud kan hjælpe dig, så tøv ikke med at booke en
       tid!
     </p>
-    <Knap title="Book tid" link="priserkontakt.html" />
+    <Knap title="Book tid" link="/priserkontakt.html" />
   </section>
 </Layout>
 
 <style>
   #arrow {
     position: fixed;
-    right: 20px; /* Distance from the right edge of the viewport */
-    bottom: 20px; /* Distance from the bottom edge of the viewport */
-    z-index: 1000; /* Ensure it appears above other elements */
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
     cursor: pointer;
   }
   h2 {
@@ -90,7 +90,7 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
     width: fit-content;
   }
   .indhold {
-    padding: 0 220px;
+    padding: 5% 12%;
     margin-bottom: 70px;
   }
   .localmenu1 {
@@ -114,10 +114,20 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
     justify-content: space-evenly;
   }
   #kontakt {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin: 100px 220px;
   }
   @media (max-width: 800px) {
     .indhold {
-      padding: 0 120px;
+      /* padding: 0 120px; */
+    }
+    #kontakt {
+      margin: 100px 120px;
+    }
+    a {
+      font-size: 16px;
     }
   }
   @media (max-width: 450px) {
@@ -125,14 +135,14 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
       color: var(--Pesto950);
       text-align: center;
       font-family: "General Sans";
-      font-size: 20px;
+      font-size: 16px;
       font-style: normal;
       font-weight: 500;
       line-height: normal;
       margin-bottom: 5px;
     }
     .indhold {
-      padding: 0 70px;
+      /* padding: 0 70px; */
     }
     .localmenu1,
     .localmenu2 {
@@ -148,5 +158,58 @@ const Area = data.filter((behandling) => behandling.kategori == "type");
     #arrow img {
       width: 90%;
     }
+    #kontakt {
+      margin: 100px 70px;
+    }
   }
 </style>
+
+<script>
+  // Javascript fra Chat GPT
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const headerHeight = 140; // Header height in pixels
+
+    // Function to handle smooth scrolling
+    function smoothScroll(targetPosition) {
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    }
+
+    // Select all links within the .submenu
+    const submenuLinks = document.querySelectorAll(".submenu a");
+
+    submenuLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+
+        // Get the target element ID from the href attribute
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          // Calculate the offset position
+          const elementPosition =
+            targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - headerHeight;
+
+          // Scroll to the offset position smoothly
+          smoothScroll(offsetPosition);
+        }
+      });
+    });
+
+    // Handle smooth scroll for the #arrow link
+    const arrowLink = document.getElementById("arrow");
+    arrowLink.addEventListener("click", function (event) {
+      // Prevent the default link behavior
+      event.preventDefault();
+
+      // Scroll to the top smoothly
+      smoothScroll(0);
+    });
+  });
+</script>

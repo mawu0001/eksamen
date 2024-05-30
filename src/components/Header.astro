@@ -23,6 +23,14 @@
 </header>
 
 <style>
+  .menu a.active {
+    border-bottom: 2px solid var(--flamepea400);
+    padding-bottom: 2px;
+    font-weight: 600;
+    color: var(--flamepea400);
+    width: fit-content;
+  }
+
   p {
     color: var(--pesto950);
     font-family: "General Sans";
@@ -92,10 +100,14 @@
     transition: color 0.3s;
     text-align: end;
     font-size: 1rem;
+    transition:
+      color 0.3s,
+      font-weight 0.3s;
   }
 
   .menu a:hover {
-    color: var( --cornflowerblue800);
+    color: var(--flamepea400);
+    font-weight: 600;
   }
 
   .burger {
@@ -212,9 +224,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: start;
       position: absolute;
-      top: 100px; 
+      top: 100px;
       left: 0;
       width: 100%;
       z-index: 1;
@@ -233,20 +245,30 @@
 </style>
 
 <script>
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector("nav");
-  const menu = document.querySelector(".menu");
-  const links = document.querySelectorAll(".menu li a");
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+    const menu = document.querySelector(".menu");
+    const links = document.querySelectorAll(".menu li a");
 
-  burger.addEventListener("click", () => {
-    burger.classList.toggle("active");
-    nav.classList.toggle("active");
-  });
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
 
-  links.forEach((link) => {
-    link.addEventListener("click", () => {
-      burger.classList.remove("active");
-      nav.classList.remove("active");
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        burger.classList.remove("active");
+        nav.classList.remove("active");
+      });
+    });
+    // Kode fra Chat GPT
+    // Highlight the current page
+    const currentPath = window.location.pathname;
+    links.forEach((link) => {
+      if (link.getAttribute("href") === currentPath) {
+        link.classList.add("active");
+      }
     });
   });
 </script>
