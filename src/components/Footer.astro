@@ -51,9 +51,19 @@
       <h4>Sociale medier</h4>
       <hr />
       <div id="socials">
-        <img src="../svg/fb_logo.svg" alt="facebook logo" loading="lazy" />
-        <img src="../svg/in_logo.svg" alt="instagram logo" loading="lazy" />
-        <img src="../svg/ig_logo.svg" alt="linked in logo" loading="lazy" />
+        <a href="#">
+          <img src="../svg/fb_logo.svg" alt="facebook logo" loading="lazy" /></a
+        >
+        <a href="#">
+          <img
+            src="../svg/in_logo.svg"
+            alt="instagram logo"
+            loading="lazy"
+          /></a
+        >
+        <a href="#">
+          <img src="../svg/ig_logo.svg" alt="linked in logo" loading="lazy" />
+        </a>
       </div>
     </div>
   </section>
@@ -91,14 +101,13 @@
     flex-direction: column;
     align-content: stretch;
     justify-content: space-between;
+    row-gap: 20px;
   }
   #container1_1_2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 15px;
-  }
-  #container3_2_2 {
   }
   #container3_2_1 article {
     row-gap: 15px;
@@ -142,13 +151,6 @@
     footer {
       display: flex;
       flex-direction: column;
-    }
-  }
-  @media screen and (max-width: 450px) {
-    #container1,
-    #container2,
-    #container3 {
-      row-gap: 20px;
     }
   }
 </style>
