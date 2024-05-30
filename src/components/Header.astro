@@ -224,13 +224,13 @@
     });
     // kode fra chat gpt
     // virker ikke
-    // const currentPath = window.location.pathname;
-    // links.forEach((link) => {
-    //   const anchor = link as HTMLAnchorElement;
-    //   const linkPath = new URL(anchor.href).pathname;
-    //   if (linkPath === currentPath) {
-    //     anchor.classList.add("active");
-    //   }
-    // });
+    const currentPath = window.location.pathname;
+    links.forEach((link) => {
+      const anchor = link as HTMLAnchorElement;
+      const linkPath = new URL(anchor.href).pathname;
+      if (linkPath === currentPath) {
+        anchor.classList.add("active");
+      }
+    });
   });
 </script>
