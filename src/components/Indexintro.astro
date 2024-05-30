@@ -7,7 +7,11 @@ import Knap from "./Knap.astro";
     <h3>Psykoterapeut</h3>
     <h1>Pernille Grønhøj</h1>
   </div>
-  <img src="../img/portraet6sorthvid.webp" alt="" />
+  <img
+    src="../img/portraet6sorthvid.webp"
+    alt="portæt af pernille grønhøj"
+    loading="lazy"
+  />
   <div>
     <p>
       Som terapeut, der selv er særligt sensitiv, bringer jeg en unik forståelse
@@ -48,9 +52,13 @@ import Knap from "./Knap.astro";
     display: flex;
     gap: 30px;
   }
-
   h3 {
     font-family: var(--secondaryfont);
+  }
+  @media (max-width: 1000px) {
+    p {
+      font-size: 16px;
+    }
   }
   @media (max-width: 800px) {
     section {
@@ -59,23 +67,12 @@ import Knap from "./Knap.astro";
       grid-template-rows: auto auto auto;
       padding: 20px;
       column-gap: 20px;
-
-      /* Hvis vi skal ændre tilbage så stod dette nedanfor under denne section */
-      /* padding: 20px 120px; 
-      display: flex;
-      flex-direction: column; */
     }
-
     img {
       width: 300px;
       height: auto;
     }
-
-    /* #knapper{
-      display: grid;
-    } */
   }
-
   @media (max-width: 450px) {
     section {
       display: flex;

@@ -13,8 +13,7 @@ import Knap from "./Knap.astro";
       pleje vores indre blomster.
     </p>
   </div>
-
-  <img src="../img/vokseoggro.webp" alt="" />
+  <img src="../img/vokseoggro.webp" alt="billede af en statue" loading="lazy" />
   <div id="knap">
     <Knap title="Læs mere" link="ommig.html" />
   </div>
@@ -22,55 +21,46 @@ import Knap from "./Knap.astro";
 
 <style>
   section {
+    align-items: center;
     background-color: var(--pesto300);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 20px 220px;
     margin-top: 100px;
-    align-items: center;
+    padding: 20px 220px;
     position: relative;
   }
-
-  #knap {
-    align-content: center;
-    display: flex;
-  }
-
   img {
-    grid-column: 2;
     display: flex;
-    justify-self: end;
+    grid-column: 2;
     grid-row: 1 / span 2;
-    width: 350px;
     height: auto;
+    width: 350px;
+    justify-self: center;
   }
-  h3 {
-    font-family: var(--secondaryfont);
+  #knap {
+    display: flex;
   }
-
   @media (max-width: 800px) {
     section {
-      padding: 20px 70px;
       display: grid;
       flex-direction: row;
+      padding: 20px 70px;
       row-gap: 20px;
     }
-
     img {
-      width: 250px;
       height: auto;
+      width: 250px;
     }
   }
   @media (max-width: 450px) {
     section {
-      padding: 20px 70px;
       display: flex;
       flex-direction: column;
+      padding: 20px 70px;
     }
-
     img {
-      width: 200px;
       height: auto;
+      width: 200px;
     }
   }
 </style>

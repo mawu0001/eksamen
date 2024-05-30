@@ -4,7 +4,7 @@ import Knap from "./Knap.astro";
 
 <section>
   <div id="image_container">
-    <img src="../img/havet.webp" alt=" billede af fynshoved" />
+    <img src="../img/havet.webp" alt=" billede af fynshoved" loading="lazy" />
   </div>
   <article id="text_container">
     <div id="heading">
@@ -26,8 +26,11 @@ import Knap from "./Knap.astro";
     </div>
   </article>
 </section>
-
 <style>
+  section {
+    margin-top: 100px;
+    position: relative;
+  }
   #image_container {
     height: 600px;
     overflow: hidden;
@@ -36,62 +39,54 @@ import Knap from "./Knap.astro";
     width: 100%;
     height: auto;
   }
-  section {
-    position: relative;
-    /* display:inline-block; */
-    margin-top: 100px;
-  }
-
   #heading {
     text-align: center;
+    margin-bottom: 40px;
   }
   #text_container {
+    background: rgba(229, 137, 82, 0.7);
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
-    border-radius: 30px;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(229, 137, 82, 0.7);
-    position: absolute;
     padding: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 70%;
-    row-gap: 25px;
   }
   p {
     column-count: 2;
     column-gap: 40px;
     max-width: none;
   }
-
   #button_container {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
-
   @media (max-width: 800px) {
     img {
       display: none;
     }
-    #text_container {
-      margin-top: 20%;
-    }
     #heading {
-      row-gap: 10px;
       display: flex;
       flex-direction: column;
+      row-gap: 10px;
+    }
+    #text_container {
+      margin-top: 20%;
     }
   }
   @media (max-width: 450px) {
     section {
       margin-top: 350px;
     }
-    p {
-      column-count: 1;
-    }
     #text_container {
       margin-top: -5%;
+    }
+    p {
+      column-count: 1;
     }
   }
 </style>
