@@ -1,6 +1,6 @@
 :root {
   --primaryfont: "General Sans", sans-serif;
-  --secondaryfont: "Gambarino", serif;
+  --secondaryfont: "Plus Jakarta Sans", sans-serif;
   --flamepea50: #f1e9d9;
   --flamepea300: #eeb283;
   --flamepea400: #e58952;
@@ -27,7 +27,7 @@ h2,
 h3,
 h4 {
   color: var(--pesto950);
-  font-family: "General Sans", sans-serif;
+  font-family: var(--primaryfont);
   font-style: normal;
   line-height: normal;
 }
@@ -50,7 +50,7 @@ h4 {
 p,
 ul {
   color: var(--pesto950);
-  font-family: "Gambarino", serif;
+  font-family: var(--secondaryfont);
   font-size: 20px;
   font-style: normal;
   font-weight: 400;

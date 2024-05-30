@@ -49,14 +49,14 @@
   .pris {
     grid-column: 2;
     text-align: right;
-    font-family: "General Sans";
+    font-family: var(--primaryfont);
   }
   .p_titel {
     grid-column: 1;
   }
   .tid {
     grid-column: 1;
-    font-family: "General Sans";
+    font-family: var(--primaryfont);
   }
   hr {
     grid-column: 1 / span 2;
@@ -64,7 +64,7 @@
   }
   .priser {
     text-align: center;
-    background-color: #eeb283;
+    background-color: var(--flamepea300);
     border-radius: 50% 50% 0 0; /* Creates a half-circle */
     width: 160px;
     height: 100px; /* Half the height of the original circle */
@@ -78,13 +78,13 @@
     margin-top: -2%;
   }
   .boks {
-    background-color: #eeb283;
+    background-color: var(--flamepea300);
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-left: 28%;
     margin-right: 28%;
-    border-radius: 0px 0px 35px 35px;
+    border-radius: 0px 0px 30px 30px;
     margin-bottom: 5%;
     padding: 1.1%;
     margin-bottom: 100px;
@@ -97,10 +97,6 @@
   /* Mobil */
   @media (max-width: 450px) {
     .boks {
-      background-color: #eeb283;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
       margin-left: 16%;
       margin-right: 16%;
       border-radius: 0px 0px 35px 35px;
@@ -113,9 +109,6 @@
       padding: 2%;
     }
     .priser {
-      text-align: center;
-      background-color: #eeb283;
-      border-radius: 50% 50% 0 0;
       margin-top: 70px;
       padding-top: 20px;
       height: 70px;
@@ -123,20 +116,20 @@
     .priser_tabel {
       margin-left: 10%;
       margin-right: 10%;
-      top: -25px; /* Adjust this value as needed for smaller screens */
+      top: -25px;
     }
     .cirkel {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: -12%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: -12%;
     }
   }
   @media (max-width: 800px) {
     .cirkel {
-    margin-top: -5%;
+      margin-top: -5%;
     }
-    .boks{
+    .boks {
       margin-top: -40px;
     }
   }
