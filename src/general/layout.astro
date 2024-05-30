@@ -50,34 +50,3 @@ const { Fanenavn } = Astro.props;
     <Footer />
   </body>
 </html>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const burger = document.querySelector(".burger");
-    const nav = document.querySelector("nav");
-    const menu = document.querySelector(".menu");
-    const links = document.querySelectorAll(".menu li a");
-
-    burger.addEventListener("click", () => {
-      burger.classList.toggle("active");
-      nav.classList.toggle("active");
-    });
-
-    links.forEach((link) => {
-      link.addEventListener("click", () => {
-        burger.classList.remove("active");
-        nav.classList.remove("active");
-      });
-    });
-    // kode fra chat gpt
-    // Highlight the current page
-    const currentPath = window.location.pathname;
-    links.forEach((link) => {
-      const anchor = link as HTMLAnchorElement;
-      const linkPath = new URL(anchor.href).pathname; // Få kun pathname fra link href
-      if (linkPath === currentPath) {
-        anchor.classList.add("active");
-      }
-    });
-  });
-</script>

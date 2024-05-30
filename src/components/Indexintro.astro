@@ -76,12 +76,17 @@ import Knap from "./Knap.astro";
       height: auto;
     }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 600px) {
     section {
       display: flex;
       flex-direction: column;
       padding: 20px 70px;
     }
+    #knapper {
+      flex-direction: row;
+    }
+  }
+  @media (max-width: 450px) {
     img {
       width: 300px;
       height: auto;
